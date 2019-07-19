@@ -26,7 +26,7 @@
         "service-mapping": {
             "url": "",
             "name": "MotifFinderSampler",
-            "method": "run_MotifFinderSampler",
+            "method": "DiscoverMotifsFromSequenceSet",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",

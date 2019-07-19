@@ -4,6 +4,8 @@ import time
 import unittest
 from configparser import ConfigParser
 
+from pprint import pprint
+
 from MotifFinderSampler.MotifFinderSamplerImpl import MotifFinderSampler
 from MotifFinderSampler.MotifFinderSamplerServer import MethodContext
 from MotifFinderSampler.authclient import KBaseAuth as _KBaseAuth
@@ -42,9 +44,6 @@ class MotifFinderSamplerTest(unittest.TestCase):
         cls.serviceImpl = MotifFinderSampler(cls.cfg)
         cls.scratch = cls.cfg['scratch']
         cls.callback_url = os.environ['SDK_CALLBACK_URL']
-        suffix = int(time.time() * 1000)
-        cls.wsName = "test_ContigFilter_" + str(suffix)
-        ret = cls.wsClient.create_workspace({'workspace': cls.wsName})  # noqa
 
     @classmethod
     def tearDownClass(cls):
@@ -52,8 +51,26 @@ class MotifFinderSamplerTest(unittest.TestCase):
             cls.wsClient.delete_workspace({'workspace': cls.wsName})
             print('Test workspace was deleted')
 
+    def getWsClient(self):
+        return self.__class__.wsClient
+
+    def getWsName(self):
+        if hasattr(self.__class__, 'wsName'):
+            return self.__class__.wsName
+        suffix = int(time.time() * 1000)
+        wsName = "test_MotifFinderSampler_" + str(suffix)
+        ret = self.getWsClient().create_workspace({'workspace': wsName})  # noqa
+        self.__class__.wsName = wsName
+        return wsName
+
+    def getImpl(self):
+        return self.__class__.serviceImpl
+
+    def getContext(self):
+        return self.__class__.ctx
+
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
-    def test_your_method(self):
+    def test_sampler(self):
         # Prepare test objects in workspace if needed using
         # self.getWsClient().save_objects({'workspace': self.getWsName(),
         #                                  'objects': []})
@@ -63,5 +80,23 @@ class MotifFinderSamplerTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_MotifFinderSampler(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+        params = {
+                'workspace_name': 'rmr:narrative_1558461244202',
+                'SS_ref' : '28598/24/1',
+                'promoter_length':100,
+                'motif_min_length':8,
+                'motif_max_length':16,
+                #'background_group': {'background' : 1, 'genome_ref' : '22748/2/1'},
+                'background_group': {'background': 0, 'genome_ref': '22748/2/1'},
+                'TESTFLAG' : 1,
+                'mask_repeats' : 1,
+                'obj_name' : 'MEMETESTOBJ'
+        }
+
+        #result = self.getImpl().ExtractPromotersFromFeatureSetandDiscoverMotifs(self.getContext(),params)
+        result = self.getImpl().DiscoverMotifsFromSequenceSet(self.getContext(),params)
+        print('RESULT:')
+        pprint(result)
+
+        #ret = self.getImpl().run_MotifFinderSampler(self.getContext(), {'workspace_name': self.getWsName(),
+        #                                                            'parameter_1': 'Hello World!'})
