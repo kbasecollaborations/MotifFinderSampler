@@ -1,7 +1,10 @@
 {
-    "ver": "0.0.1",
+    "ver": "0.0.4",
     "authors": [
-        "man4ish"
+        "arwyer",
+        "pranjan77",
+        "rmr",
+        "man4ish_gupta"
     ],
     "contact": "",
     "categories": ["active"],
@@ -9,18 +12,84 @@
         "input": null,
         "output": null
     },
-    "parameters": [ 
+    "parameters": [
         {
-            "id": "parameter_1",
+            "id": "genome_ref",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ ]
+                "valid_ws_types": [ "KBaseGenomes.Genome"]
             }
-        }
+        },
+        {
+
+            "id": "SS_ref",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseSequences.SequenceSet" ]
+            }
+        },
+        {
+            "id": "motif_length",
+            "optional": false,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ "8" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 0
+            }
+        },
+        {
+
+            "id": "obj_name",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "Sampler_Motif_Set" ],
+            "field_type": "text"
+        },
+        {
+            "id": "background",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "checkbox",
+            "checkbox_options": {
+                "checked_value": 1,
+                "unchecked_value": 0
+            }
+        } ,
+        {
+            "id": "mask_repeats",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "checkbox",
+            "checkbox_options": {
+                "checked_value": 1,
+                "unchecked_value": 0
+            }
+        }       
+    ],
+    "parameter-groups": [
+      {
+        "id": "background_group",
+        "parameters": ["genome_ref","background"],
+        "optional": true,
+        "allow_multiple": false,
+        "with_border": true
+      }
     ],
     "behavior": {
         "service-mapping": {
@@ -31,21 +100,48 @@
                 {
                     "narrative_system_variable": "workspace",
                     "target_property": "workspace_name"
-                },{
-                    "narrative_system_variable": "workspace_id",
-                    "target_property": "workspace_id"
-                },{
-                    "input_parameter": "parameter_1",
-                    "target_property": "parameter_1"
+                },
+                {
+                    "input_parameter": "genome_ref",
+                    "target_property": "genome_ref",
+                    "target_type_transform": "resolved-ref"
+                },
+                {
+                    "input_parameter": "SS_ref",
+                    "target_property": "SS_ref",
+                    "target_type_transform": "resolved-ref"
+                },
+                {
+                    "input_parameter": "motif_length",
+                    "target_property": "motif_length"
+
+                },
+                {
+                    "input_parameter": "obj_name",
+                    "target_property": "obj_name"
+
+                },
+                {
+                  "input_parameter": "background_group",
+                  "target_property": "background_group"
+                },
+                {
+                  "input_parameter": "mask_repeats",
+                  "target_property": "mask_repeats"
                 }
             ],
             "output_mapping": [
                 {
                     "service_method_output_path": [0,"report_name"],
                     "target_property": "report_name"
-                },{
+                },
+                {
                     "service_method_output_path": [0,"report_ref"],
                     "target_property": "report_ref"
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspace_name"
                 }
             ]
         }

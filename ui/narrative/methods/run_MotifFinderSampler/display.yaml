@@ -1,40 +1,70 @@
+## define display information
 #
-# define display information
-#
-name: Method Name Here
+name: Motif Finder MFMD
 
 tooltip: |
-    Perform some kind of method
-
+    Use the MFMD motif finding tool to discover sequence motifs upsteam of a specified gene list.
 screenshots: []
 
-icon: icon.png
+icon: null
 
 #
-# define a set of similar apps that might be useful to the user
+# define a set of similar methods that might be useful to the user
 #
 suggestions:
     apps:
         related:
-            [app1, app2]
+            []
         next:
-            [app3, app4]
+            []
+    methods:
+        related:
+            []
+        next:
+            []
 
 #
 # Configure the display and description of parameters
 #
 parameters :
-    parameter_1 :
+    genome_ref :
         ui-name : |
-            First parameter
+            Genome
         short-hint : |
-            The first parameter
-        long-hint  : |
-            The first parameter that needs to be entered to drive the method. This might be the first of many.
-
+            The genome to evaluate
+    SS_ref :
+        ui-name : |
+            Sequence Set
+        short-hint : |
+            sequences
+    motif_length :
+        ui-name : |
+            Motif length
+        short-hint : |
+            Length of motif to search for
+    obj_name :
+        ui-name : |
+            Output object name
+        short-hint : |
+            Output object name
+    background :
+        ui-name : |
+            Use Background Model
+        short-hint : |
+            Use genome to create background model
+    mask_repeats :
+        ui-name : |
+            Mask Repeats
+        short-hint : |
+            Mask low complexity regions of sequences 
+parameter-groups :
+    background_group :
+        ui-name : |
+            Background
+        short-hint : |
+            Build background model from genome
 description : |
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar efficitur felis, quis tincidunt sem congue at. Vivamus ornare feugiat faucibus. Fusce tincidunt mattis nunc, nec varius purus convallis quis. Nulla facilisi. In at magna dolor. Suspendisse sit amet felis at arcu auctor dapibus vitae pharetra dui. Nam semper mi quis tortor fermentum mollis. Donec a arcu pharetra, rutrum dolor vitae, rutrum mauris. Donec ornare fringilla sagittis. Nam laoreet est in elementum malesuada. Vestibulum id mi eget urna hendrerit feugiat. Donec et ultrices nulla. Phasellus diam eros, dapibus at tempus nec, semper vel ante.</p>
-
-    <p>Curabitur auctor, metus at tristique euismod, odio elit tincidunt neque, a facilisis sem massa convallis dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ut hendrerit tellus. Nunc lacinia laoreet finibus. Etiam vitae sagittis enim. Fusce consectetur porta est eu pretium. In hac habitasse platea dictumst. Integer pellentesque sit amet sapien id venenatis. Nullam ac risus at orci eleifend aliquet. Vestibulum elit purus, euismod a nibh quis, pellentesque semper leo. Curabitur ullamcorper felis hendrerit nunc egestas, sit amet pharetra sapien porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas hendrerit ipsum a ligula aliquet vestibulum. Duis a ante urna. Aenean ante neque, rhoncus id luctus ut, accumsan vel nunc.</p>
-
-    <p>Pellentesque accumsan aliquet magna, id consectetur tellus condimentum eu. Suspendisse elit dui, ornare ac leo eget, tincidunt feugiat orci. Maecenas auctor gravida lacinia. Mauris interdum nisi vel gravida varius. Nullam tempus, purus eget posuere aliquet, odio elit semper massa, quis facilisis massa odio vitae lacus. Fusce varius enim a mi vehicula tempus. Maecenas faucibus tellus ipsum, at venenatis ipsum auctor et. Suspendisse sem mi, dignissim id porta efficitur, auctor eget magna. Vivamus varius purus nulla, porttitor euismod lorem cursus quis. Nulla sit amet eros nec sem ultrices pulvinar.</p>
+    <p>MFMD is a motif finding application that uses a novel motif discovery algorithm that was focused on gene regulation elements (DNA only). Using a control and experimental sequence set Homer tries to identify the enriched sequences on the experimental set relative to the control set. This algorithm uses zero or one occurrence per sequence scoring and hypergeometric enrichment calculation (or binomial) to detect enriched motifs. This algorithm was specifically design with ChIP-seq and promoter analysis in mind. </p>
+    <p>Input to Motif Finder Homer start with a feature set, which can either be created through a RNA-seq analysis pipeline, network clustering analysis, or by picking features out from a particular genome. From this feature set, upstream sequences are collected and then the Homer analysis is run on the promoter sequence of length defined by the user. </p>
+    <p>This app is part of a series of app stacked to find motifs within upstream sequence regions. They are used in combination with Motif Finder Ensemble to aggregate motif finder results to produce more accurately identified motifs. </p>
+    <p>Heinz S, Benner C, Spann N, Bertolino E et al. Simple Combinations of Lineage-Determining Transcription Factors Prime cis-Regulatory Elements Required for Macrophage and B Cell Identities. Mol Cell 2010 May 28;38(4):576-589. PMID 20513432 http://www.ncbi.nlm.nih.gov/sites/entrez?Db=Pubmed&term=20513432[UID] </p>
