@@ -1,7 +1,23 @@
 [ {
+  "module_name" : "AssemblyUtil",
+  "type" : "sdk",
+  "version_tag" : "release"
+}, {
+  "module_name" : "DataFileUtil",
+  "type" : "sdk",
+  "version_tag" : "release"
+}, {
   "module_name" : "KBaseReport",
   "type" : "sdk",
   "version_tag" : "release"
+}, {
+  "module_name" : "MotifUtils",
+  "type" : "sdk",
+  "version_tag" : "dev"
+}, {
+  "module_name" : "SequenceSetUtils",
+  "type" : "sdk",
+  "version_tag" : "dev"
 }, {
   "module_name" : "Workspace",
   "type" : "core",
