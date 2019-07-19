@@ -7,6 +7,19 @@ MAINTAINER KBase Developer
 # installation scripts.
 
 # RUN apt-get update
+RUN apt-get update
+RUN apt-get --yes --force-yes install build-essential
+RUN apt-get --yes --force-yes install wget
+RUN apt-get --yes --force-yes install zip
+
+
+RUN mkdir -p /kb/deps
+COPY ./deps /kb/deps
+RUN echo Making dependency
+COPY ./data /kb/data
+
+RUN \
+  sh /kb/deps/kb_meme/install-meme.sh
 
 
 # -----------------------------------------

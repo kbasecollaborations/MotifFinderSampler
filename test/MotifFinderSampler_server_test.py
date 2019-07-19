@@ -84,13 +84,11 @@ class MotifFinderSamplerTest(unittest.TestCase):
                 'workspace_name': 'rmr:narrative_1558461244202',
                 'SS_ref' : '28598/24/1',
                 'promoter_length':100,
-                'motif_min_length':8,
-                'motif_max_length':16,
-                #'background_group': {'background' : 1, 'genome_ref' : '22748/2/1'},
+                'motif_length':8,
                 'background_group': {'background': 0, 'genome_ref': '22748/2/1'},
                 'TESTFLAG' : 1,
                 'mask_repeats' : 1,
-                'obj_name' : 'MEMETESTOBJ'
+                'obj_name' : 'SAMPLERTESTOBJ'
         }
 
         #result = self.getImpl().ExtractPromotersFromFeatureSetandDiscoverMotifs(self.getContext(),params)

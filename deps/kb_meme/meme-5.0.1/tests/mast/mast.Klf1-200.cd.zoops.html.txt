@@ -1,0 +1,1724 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.0.0 (Release date: Sat Oct 28 09:21:30 2017 -0700)
+
+	For further information on how to interpret these results or to get
+	a copy of the MAST software please access http://meme-suite.org .
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE Klf1-200.fa (nucleotide)
+	Last updated on Sat Sep 16 10:09:04 2017
+	Database contains 200 sequences, 100000 residues
+
+	Scores for positive and reverse complement strands are combined.
+
+	MOTIFS meme.Klf1-200.cd.zoops.html (nucleotide)
+	MOTIF ID        ALT ID WIDTH BEST POSSIBLE MATCH
+	----- --------- ------ ----- -------------------
+	    1 GGGTGTGGC MEME-1     9 GGGTGTGGC
+	    2 WGGGYGKR  MEME-2     8 TGGGTGGA
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1
+	----- -----
+	   2   0.61
+	Correlations above 0.60 may cause some combined p-values and
+	E-values to be underestimates.
+	Removing motif 2 from the query may be advisable.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.274 C 0.225 G 0.225 T 0.274 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 92 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+chr17:5112057-5112557                                               0.059    500
+chr5:138127197-138127697                                             0.12    500
+chr19:5845899-5846399                                                0.12    500
+chr4:135733850-135734350                                             0.14    500
+chr6:72223026-72223526                                               0.21    500
+chr7:105490727-105491227                                             0.21    500
+chr5:65202593-65203093                                               0.22    500
+chr9:57618594-57619094                                               0.24    500
+chr10:110604369-110604869                                            0.31    500
+chr17:28960252-28960752                                              0.31    500
+chr1:169314208-169314708                                             0.31    500
+chr7:151917814-151918314                                             0.31    500
+chr11:117187372-117187872                                            0.31    500
+chr12:112796794-112797294                                            0.31    500
+chr1:137838164-137838664                                             0.31    500
+chr5:45951565-45952065                                               0.31    500
+chr3:104843905-104844405                                             0.31    500
+chr7:19832207-19832707                                               0.31    500
+chr7:91033422-91033922                                               0.31    500
+chr4:154285745-154286245                                             0.37    500
+chr8:97323995-97324495                                               0.37    500
+chr9:120025371-120025871                                              0.4    500
+chr1:173447614-173448114                                             0.45    500
+chr6:81915769-81916269                                               0.47    500
+chr13:112863645-112864145                                            0.49    500
+chr13:3866266-3866766                                                0.52    500
+chr14:63796627-63797127                                              0.55    500
+chr6:121187425-121187925                                             0.56    500
+chr1:133343883-133344383                                             0.56    500
+chr5:33616214-33616714                                               0.56    500
+chr7:110976195-110976695                                             0.56    500
+chr14:79702844-79703344                                              0.56    500
+chr7:111007530-111008030                                             0.63    500
+chr17:47735006-47735506                                              0.63    500
+chr1:156887119-156887619                                             0.64    500
+chr11:57590460-57590960                                              0.64    500
+chr15:81700367-81700867                                              0.64    500
+chr4:43977111-43977611                                               0.64    500
+chr9:98389943-98390443                                               0.72    500
+chr4:149892777-149893277                                             0.72    500
+chr6:135115628-135116128                                             0.79    500
+chr15:58719281-58719781                                              0.86    500
+chr15:79757891-79758391                                              0.88    500
+chr3:97461668-97462168                                               0.88    500
+chr10:126642277-126642777                                            0.94    500
+chr10:59256089-59256589                                              0.94    500
+chr18:80416880-80417380                                              0.94    500
+chr9:21362671-21363171                                               0.94    500
+chr14:61272713-61273213                                              0.94    500
+chr10:128184604-128185104                                             1.1    500
+chr14:21299130-21299630                                               1.1    500
+chr15:91082416-91082916                                               1.1    500
+chr10:60612190-60612690                                               1.1    500
+chr1:88208803-88209303                                                1.1    500
+chr9:20561645-20562145                                                1.1    500
+chr16:91086848-91087348                                               1.1    500
+chr19:56465963-56466463                                               1.1    500
+chr17:24289205-24289705                                               1.4    500
+chr12:27135944-27136444                                               1.4    500
+chr1:169322898-169323398                                              1.4    500
+chr7:87847381-87847881                                                1.6    500
+chr11:102236405-102236905                                             1.7    500
+chr11:60988820-60989320                                               1.8    500
+chr13:100518008-100518508                                             1.8    500
+chr16:49839621-49840121                                               2.1    500
+chr5:37127175-37127675                                                2.2    500
+chr9:59598186-59598686                                                2.2    500
+chr12:114390660-114391160                                             2.4    500
+chr1:75175760-75176260                                                2.7    500
+chr6:35303481-35303981                                                  3    500
+chr18:23982470-23982970                                               3.1    500
+chr11:117642060-117642560                                             3.1    500
+chr14:47973722-47974222                                               3.4    500
+chr13:81067500-81068000                                               3.9    500
+chr5:97380648-97381148                                                4.2    500
+chr10:75308229-75308729                                               4.3    500
+chr1:36977019-36977519                                                4.3    500
+chr3:96108390-96108890                                                4.3    500
+chr1:134264178-134264678                                              4.5    500
+chr11:105013714-105014214                                             4.6    500
+chr11:80597918-80598418                                               4.8    500
+chr3:88305500-88306000                                                5.2    500
+chr4:109112541-109113041                                              5.3    500
+chr15:78243390-78243890                                               5.3    500
+chr12:70860461-70860961                                               5.3    500
+chr15:76778491-76778991                                               5.3    500
+chr9:24715045-24715545                                                5.6    500
+chr13:54345922-54346422                                               7.6    500
+chr11:32150818-32151318                                               7.9    500
+chr7:103853792-103854292                                              8.1    500
+chr7:104332488-104332988                                              9.7    500
+chr7:36132953-36133453                                                9.7    500
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [sn]  occurrence of motif `n' with p-value less than 0.0001.
+		    A minus sign indicates that the occurrence is on the
+		    reverse complement strand.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+chr17:5112057-5112557                 0.059  31-[+2]-214-[+1]-238
+chr5:138127197-138127697               0.12  33-[-1]-200-[+1]-44-[-2]-197
+chr19:5845899-5846399                  0.12  139-<+2>-26-[+2]-172-[+1]-108-[+1]-21
+chr4:135733850-135734350               0.14  143-[+1]-25-[+2]-5-[-1]-142-[-1]-150
+chr6:72223026-72223526                 0.21  276-[-1]-56-[-1]-[-1]-141
+chr7:105490727-105491227               0.21  239-[-1]-[-1]-243
+chr5:65202593-65203093                 0.22  276-[+2]-64-[+1]-4-[+2]-8-[+2]-115
+chr9:57618594-57619094                 0.24  244-[+2]-61-[-1]-15-[-1]-154
+chr10:110604369-110604869              0.31  236-[+1]-255
+chr17:28960252-28960752                0.31  225-[+1]-92-[+1]-165
+chr1:169314208-169314708               0.31  199-[-1]-11-[-1]-272
+chr7:151917814-151918314               0.31  223-[+1]-268
+chr11:117187372-117187872              0.31  61-[+1]-176-[+1]-158-[+1]-78
+chr12:112796794-112797294              0.31  236-[+1]-52-[+1]-194
+chr1:137838164-137838664               0.31  227-[+1]-264
+chr5:45951565-45952065                 0.31  268-[-1]-223
+chr3:104843905-104844405               0.31  122-[-1]-13-[-2]-334-[+2]-6
+chr7:19832207-19832707                 0.31  236-[-1]-255
+chr7:91033422-91033922                 0.31  472-[-1]-19
+chr4:154285745-154286245               0.37  229-[+1]-[+2]-254
+chr8:97323995-97324495                 0.37  184-[-1]-307
+chr9:120025371-120025871                0.4  202-[+1]-39-[-2]-242
+chr1:173447614-173448114               0.45  376-[-1]-115
+chr6:81915769-81916269                 0.47  201-[+1]-290
+chr13:112863645-112864145              0.49  231-[+2]-36-[-1]-216
+chr13:3866266-3866766                  0.52  270-[-1]-221
+chr14:63796627-63797127                0.55  100-[-2]-142-[-1]-241
+chr6:121187425-121187925               0.56  379-[-1]-112
+chr1:133343883-133344383               0.56  239-[+1]-252
+chr5:33616214-33616714                 0.56  254-[-1]-237
+chr7:110976195-110976695               0.56  333-[+1]-158
+chr14:79702844-79703344                0.56  254-[-1]-237
+chr7:111007530-111008030               0.63  221-[+1]-270
+chr17:47735006-47735506                0.63  252-[+1]-111-[-1]-42-[+1]-28-[+1]-31
+chr1:156887119-156887619               0.64  304-[-1]-187
+chr11:57590460-57590960                0.64  69-<-2>-224-[-1]-44-[-1]-137
+chr15:81700367-81700867                0.64  116-[-1]-110-[-1]-256
+chr4:43977111-43977611                 0.64  232-[+1]-259
+chr9:98389943-98390443                 0.72  210-[-2]-41-[-1]-232
+chr4:149892777-149893277               0.72  363-[+1]-128
+chr6:135115628-135116128               0.79  240-[-2]-252
+chr15:58719281-58719781                0.86  260-[+2]-86-[+1]-137
+chr15:79757891-79758391                0.88  313-[+2]-58-[-1]-69-[+1]-1-[-1]-24
+chr3:97461668-97462168                 0.88  276-[+2]-27-[-1]-129-[+2]-43
+chr10:126642277-126642777              0.94  259-[-1]-232
+chr10:59256089-59256589                0.94  301-[-1]-190
+chr18:80416880-80417380                0.94  246-[-1]-245
+chr9:21362671-21363171                 0.94  108-[+2]-144-[+1]-231
+chr14:61272713-61273213                0.94  354-[+1]-137
+chr10:128184604-128185104               1.1  192-[+1]-21-[+2]-270
+chr14:21299130-21299630                 1.1  4-[-1]-30-[+1]-157-[+2]-10-[+2]-265
+chr15:91082416-91082916                 1.1  246-[-1]-245
+chr10:60612190-60612690                 1.1  219-[+1]-272
+chr1:88208803-88209303                  1.1  329-[-1]-162
+chr9:20561645-20562145                  1.1  112-[-1]-7-[+1]-363
+chr16:91086848-91087348                 1.1  47-[+2]-84-[-1]-352
+chr19:56465963-56466463                 1.1  310-[+1]-47-[+1]-29-[+1]-87
+chr17:24289205-24289705                 1.4  250-[+1]-10-[-1]-222
+chr12:27135944-27136444                 1.4  282-[-1]-155-[-1]-45
+chr1:169322898-169323398                1.4  260-[-1]-231
+chr7:87847381-87847881                  1.6  140-[-2]-90-[-1]-143-[-2]-102
+chr11:102236405-102236905               1.7  192-[-1]-14-[-1]-104-[+1]-163
+chr11:60988820-60989320                 1.8  119-[+1]-146-[+1]-217
+chr13:100518008-100518508               1.8  283-[-2]-2-[-2]-85-[+1]-105
+chr16:49839621-49840121                 2.1  276-[-1]-86-<-2>-121
+chr5:37127175-37127675                  2.2  253-[+1]-29-[+2]-201
+chr9:59598186-59598686                  2.2  45-[+1]-339-[+2]-99
+chr12:114390660-114391160               2.4  69-[+2]-37-[-1]-140-[+1]-228
+chr1:75175760-75176260                  2.7  227-[-1]-264
+chr6:35303481-35303981                    3  429-[-1]-62
+chr18:23982470-23982970                 3.1  39-[-2]-453
+chr11:117642060-117642560               3.1  30-[-2]-24-[-2]-430
+chr14:47973722-47974222                 3.4  25-[+1]-191-<+2>-267
+chr13:81067500-81068000                 3.9  266-[+1]-225
+chr5:97380648-97381148                  4.2  368-[+2]-124
+chr10:75308229-75308729                 4.3  388-[+1]-103
+chr1:36977019-36977519                  4.3  392-[-1]-99
+chr3:96108390-96108890                  4.3  479-[+1]-12
+chr1:134264178-134264678                4.5  451-[-2]-41
+chr11:105013714-105014214               4.6  309-[+1]-111-[+2]-63
+chr11:80597918-80598418                 4.8  304-[-1]-187
+chr3:88305500-88306000                  5.2  233-[+1]-258
+chr4:109112541-109113041                5.3  28-[-1]-21-[+1]-189-<+2>-236
+chr15:78243390-78243890                 5.3  238-[+1]-184-[-1]-60
+chr12:70860461-70860961                 5.3  258-[-2]-234
+chr15:76778491-76778991                 5.3  330-[-2]-162
+chr9:24715045-24715545                  5.6  152-[+1]-230-[+1]-100
+chr13:54345922-54346422                 7.6  478-[+1]-13
+chr11:32150818-32151318                 7.9  160-[-2]-39-[-2]-5-[+2]-272
+chr7:103853792-103854292                8.1  288-[+1]-203
+chr7:104332488-104332988                9.7  224-[-1]-267
+chr7:36132953-36133453                  9.7  164-[-1]-327
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence (a minus sign indicates that
+	  the occurrence is on the reverse complement strand),
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif (or its reverse complement), and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+chr17:5112057-5112557
+  LENGTH = 500  COMBINED P-VALUE = 2.95e-04  E-VALUE =    0.059
+  DIAGRAM: 31-[+2]-214-[+1]-238
+
+                                    [+2]
+                                    1.2e-05
+                                    TGGGTGGA
+                                    ++++++++
+1    ATTGCCGATCTGAACACCAGCCTGGCCAACGTGGGTGGAGATGCATTCACGAATGATAGCAATGGGTTAGAAAGC
+
+                                 [+1]
+                                 2.2e-06
+                                 GGGTGTGGC
+                                 +++++++++
+226  TGACCCGTGATAAGAGCAAAACATGTGAGGGTGTGGCTCAGGGTTCCTGTCTGTGCTTAGTAGGGCCTTGCCTGC
+
+
+chr5:138127197-138127697
+  LENGTH = 500  COMBINED P-VALUE = 6.08e-04  E-VALUE =     0.12
+  DIAGRAM: 33-[-1]-200-[+1]-44-[-2]-197
+
+                                      [-1]
+                                      1.7e-05
+                                      GCCACACCC
+                                      +++ +++++
+1    NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNCCACCCCACCCCCACCAAAAAAAAAGCCTCTTGTACATTTTCAG
+
+                      [+1]                                                 [-2]
+                      4.9e-06                                              1.2e-
+                      GGGTGTGGC                                            TCCAC
+                      +++++++++                                            +++++
+226  GTCTGTCTTTTGCTACAGGGTGTGGTCTGCAAGAGCAACCAGAGGGTGCGCTTCCTCCTCCTGTCTCTACTCCAC
+
+     
+     05
+     CCA
+     +++
+301  CCAGGCCATATCAGAGAGTGACAACCCTATTTCCCCTCATAATCAGCAAGAGCACAGGCAGCCCGGGGACTCCCT
+
+
+chr19:5845899-5846399
+  LENGTH = 500  COMBINED P-VALUE = 6.08e-04  E-VALUE =     0.12
+  DIAGRAM: 139-<+2>-26-[+2]-172-[+1]-108-[+1]-21
+
+                                                                     <+2>
+                                                                     1.0e-04
+                                                                     TGGGTGGA
+                                                                     ++++++++
+76   GGCGCGTGACTTCTCGGGCGTTGCCGCCGCCTGCTCGCAGGGTGACGTCAGTGCGGGCAGCAGCAGGGTGGGGGT
+
+                            [+2]
+                            1.2e-05
+                            TGGGTGGA
+                            ++++++++
+151  GGGGAAGAACTATCCCAGCAGCTTGGGTGGAATGCTTAATTGCGTCTAAGGTTAATTAAATTGCGGGAAAGGTGG
+
+                                                          [+1]
+                                                          4.9e-06
+                                                          GGGTGTGGC
+                                                          +++++++++
+301  GGTTGAAGAGCGCCCAGTACAGTTAAGTGATTTTAGAAAACATTTTTGCTTTTGGGTGTGGTATAGTGAGAAAAA
+
+                         [+1]
+                         1.7e-05
+                         GGGTGTGGC
+                         +++++ +++
+451  CCAGGCTGGCTGTCTACTTGGGGTGGGGTCCAGCACAGGTCCAAAAGCAA
+
+
+chr4:135733850-135734350
+  LENGTH = 500  COMBINED P-VALUE = 7.07e-04  E-VALUE =     0.14
+  DIAGRAM: 143-[+1]-25-[+2]-5-[-1]-142-[-1]-150
+
+                                                                         [+1]
+                                                                         2.2e-06
+                                                                         GGGTGTG
+                                                                         +++++++
+76   CCAAACCGGGATGGGGGTGGGCAGGAGGGAGAGTGTTTGCACTGTTTCCCAATGCGGGCACCTCCCTGGGGTGTG
+
+                                [+2]         [-1]
+                                3.2e-05      9.4e-06
+     GC                         TGGGTGGA     GCCACACCC
+     ++                         ++++++++     +++ +++++
+151  GCACTGAGCCAGGAAGTCCCCTGGGCCTGGGCGGATGCTGGCCCCACCCTGATAAGGGCCAGCTGTGGAGCTGTG
+
+                                              [-1]
+                                              9.5e-05
+                                              GCCACACCC
+                                              +++++++ +
+301  CAGTGGGCGCTGACACTTCCTCACCAAGTTCAGCCGGCCACGCCACACACCGCACTGAGGGCTGGTGGCAAGCAC
+
+
+chr6:72223026-72223526
+  LENGTH = 500  COMBINED P-VALUE = 1.04e-03  E-VALUE =     0.21
+  DIAGRAM: 276-[-1]-56-[-1]-[-1]-141
+
+                                                        [-1]
+                                                        2.7e-05
+                                                        GCCACACCC
+                                                        +++ + +++
+226  GATCCCATGGAGCCAGCTCTTGTTTGGTCAGTCTTGTCTACCCATCTTCCTGCCCCTCCCCCACCACCACCCTGA
+
+                                              [-1]     [-1]
+                                              1.7e-05  4.9e-06
+                                              GCCACACCCGCCACACCC
+                                              +++ ++++++++++++++
+301  TTACGGGGCATGCCCAGTTCACTTACCAGACCTCACAGCCGACCCCACCCACCACACCCATCCCAGACAGCACTC
+
+
+chr7:105490727-105491227
+  LENGTH = 500  COMBINED P-VALUE = 1.04e-03  E-VALUE =     0.21
+  DIAGRAM: 239-[-1]-[-1]-243
+
+                   [-1]     [-1]
+                   4.9e-06  4.9e-06
+                   GCCACACCCGCCACACCC
+                   ++++++++++++++++++
+226  GTTCTAAGACCTGAACCACACCCACCACACCCACCCATGTGAAAGTTTAAAGATTATGTAATCCTAAAGCTAAAC
+
+
+chr5:65202593-65203093
+  LENGTH = 500  COMBINED P-VALUE = 1.09e-03  E-VALUE =     0.22
+  DIAGRAM: 276-[+2]-64-[+1]-4-[+2]-8-[+2]-115
+
+                                                        [+2]
+                                                        5.8e-05
+                                                        TGGGTGGA
+                                                        ++++++++
+226  ACCCTGACAGTTCTTTCTGGTTATTTTTAAGGTTCCAGCCATCCTTGGTTCAGGGTGGAATTTCCAGGAACTGGC
+
+                                                     [+1]         [+2]
+                                                     9.4e-06      1.2e-05
+                                                     GGGTGTGGC    TGGGTGGA
+                                                     +++++ +++    ++++++++
+301  TTCAGCTTGGAGCCAGTCGGGTCCCTCCCAGCCTTCCCACTCCCTGCAGGGTGGGGCCCCATGGGTGGAGGCCCA
+
+       [+2]
+       5.8e-05
+       TGGGTGGA
+       ++++++++
+376  GCAGGGTGGAGTGAGGTGGGTCTCCAGTGATAGGGAGGGCACCTAGTGAGCCAGGCAGATGAGAGGCCCCGTGGC
+
+
+chr9:57618594-57619094
+  LENGTH = 500  COMBINED P-VALUE = 1.21e-03  E-VALUE =     0.24
+  DIAGRAM: 244-[+2]-61-[-1]-15-[-1]-154
+
+                        [+2]
+                        5.8e-05
+                        TGGGTGGA
+                        ++++++++
+226  GGTGAGCCTCAGATCAGCTAGGGTGGAACTTACACATCTTGGCTTACTCTGTAGTAATAGATAACAGTGGAGCAG
+
+                  [-1]                    [-1]
+                  1.7e-05                 2.2e-06
+                  GCCACACCC               GCCACACCC
+                  +++ +++++               +++++++++
+301  TCCACCTTTCTCCACCCCACCCTTCCCCAAGCTATGAGCCACACCCCCTTGTGTACAAGCTATGACTCAAGACTC
+
+
+chr10:110604369-110604869
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 236-[+1]-255
+
+                [+1]
+                2.2e-06
+                GGGTGTGGC
+                +++++++++
+226  TCTGAGACGCTGGGTGTGGCATTTGCTGGTGATCCTGCTCTTGGGAGATAGGGAAAGGAGGGTTACCTTGAGTTT
+
+
+chr17:28960252-28960752
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 225-[+1]-92-[+1]-165
+
+     [+1]
+     2.2e-06
+     GGGTGTGGC
+     +++++++++
+226  GGGTGTGGCTGACCCTAGGCCCTTATCCTGTCTTAGCTTCTGCTGCCATTGCCAGCTGGGTTGGAGAGGGCTTGA
+
+                               [+1]
+                               9.5e-05
+                               GGGTGTGGC
+                               + +++++++
+301  GAGTGGTTATCAGAAGAGGTAAGACTGTGTGTGGCTCTTCAAGAGGCAGAGGACCTCCCTGATAATTGAGGTTTG
+
+
+chr1:169314208-169314708
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 199-[-1]-11-[-1]-272
+
+                                                      [-1]                [-1]
+                                                      4.4e-05             2.2e-0
+                                                      GCCACACCC           GCCACA
+                                                       ++++++++           ++++++
+151  GGCCTCTGGGTCAGGGTGCACCAAGAAGGAAAGGCAGCTCAGTTCAGAATCCACACCCAGGCAGCCTCTGCCACA
+
+     
+     6
+     CCC
+     +++
+226  CCCTGGGTTGTTCCGAATGCAGAGGCAGCAGATAGCTTACAGGGCCAGGCCTGAGGAGCTGATAATTGGGAAAAG
+
+
+chr7:151917814-151918314
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 223-[+1]-268
+
+                                                                              [+
+                                                                              2.
+                                                                              GG
+                                                                              ++
+151  GGAGGCGGAATGGTGAACAATGCTGGGTGCTGGGCTGGGGAAAGATAGGAGACTATGGTGAGCCCTGCCTTCTGG
+
+     1]
+     2e-06
+     GTGTGGC
+     +++++++
+226  GTGTGGCTCCCTGCAGCAGCCAGATAGTCACAGATAACTTTCTTTTCCTCCAAAGCCAGCGACCCCAGTTCTGGG
+
+
+chr11:117187372-117187872
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 61-[+1]-176-[+1]-158-[+1]-78
+
+                                                                  [+1]
+                                                                  5.7e-05
+                                                                  GGGTGTGGC
+                                                                  +++ +++++
+1    CAGGAAGTAGACACCACCGAGGAATCGAGGAATGGTTGGTTATAGGGCCACCAGCTGCATGGGGCGTGGCAGGAA
+
+                          [+1]
+                          2.2e-06
+                          GGGTGTGGC
+                          +++++++++
+226  CATGGCCTGTAGAGGGAGGAGGGGTGTGGCCTCAGAGAACCCACTGGAGAGATGGATCAAAGCTGGGCAGGGGTT
+
+                                           [+1]
+                                           5.7e-05
+                                           GGGTGTGGC
+                                           +++++++ +
+376  GAGATCCCAGGATGGTCCCGCAAGGGCTGCCTCAGGCTGGGTGTGACTGGAGATGAGCCAGTGGGGAACCTCCCA
+
+
+chr12:112796794-112797294
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 236-[+1]-52-[+1]-194
+
+                [+1]                                                         [+1
+                5.7e-05                                                      2.2
+                GGGTGTGGC                                                    GGG
+                +++++++ +                                                    +++
+226  CTAAAGGGCCTGGGTGTGACTGGGTACATCTGGCAGGTTCCCATTATCTCCTATGGACACTGTGAAGTTGTAGGG
+
+     ]
+     e-06
+     TGTGGC
+     ++++++
+301  TGTGGCCTGGTTGACAGTGGTGGCTCTCAGTTAGGGGCTGAGTGAGGGAAGAATTACGACTGGAAATGAGCAGTT
+
+
+chr1:137838164-137838664
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 227-[+1]-264
+
+       [+1]
+       2.2e-06
+       GGGTGTGGC
+       +++++++++
+226  ATGGGTGTGGCTCTCTCTCCAGCTGGGAGCCCTGGAAGGGACAAGATAGAAGTCCTGTCCAGAAGCCAAGTCACG
+
+
+chr5:45951565-45952065
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 268-[-1]-223
+
+                                                [-1]
+                                                2.2e-06
+                                                GCCACACCC
+                                                +++++++++
+226  TTTATCTGGACATTTACTAACCTTGGTGGGGACACGCCCCAGAGCCACACCCAGGTCTGGCAATCATCTGCATGC
+
+
+chr3:104843905-104844405
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 122-[-1]-13-[-2]-334-[+2]-6
+
+                                                    [-1]                  [-2]
+                                                    2.2e-06               7.8e-0
+                                                    GCCACACCC             TCCACC
+                                                    +++++++++             ++++++
+76   TGACAACAATCAGAAGTTCTGGGTATCAAGCCGGGATGCACACGCAGGCCACACCCCTCGCCTTATGCACACACC
+
+     
+     5
+     CA
+     ++
+151  CACACAGCGCCTCCTTAACTACTTTGATGATTTTGCCTGGGAAATGTGTTGCTGTGCCCTGCTCCGTCTCTGACT
+
+                                         [+2]
+                                         7.8e-05
+                                         TGGGTGGA
+                                         ++++++++
+451  NNNNNNNNNNNGCAGGTAGTGTTTGGGTCTAGTATCTGGGTGTGAGTATC
+
+
+chr7:19832207-19832707
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 236-[-1]-255
+
+                [-1]
+                2.2e-06
+                GCCACACCC
+                +++++++++
+226  AAAAGCCCCAGGCCACACCCAAGATGTCTGACTATAGGTAACAGGTTCATTCTCCCTGGCCCTTGTCCCTAGAGG
+
+
+chr7:91033422-91033922
+  LENGTH = 500  COMBINED P-VALUE = 1.57e-03  E-VALUE =     0.31
+  DIAGRAM: 472-[-1]-19
+
+                           [-1]
+                           2.2e-06
+                           GCCACACCC
+                           +++++++++
+451  AGAAGGTCCCCTAAACCCACTGGCCACACCCACTCCCTTTCTTTGTGCAG
+
+
+chr4:154285745-154286245
+  LENGTH = 500  COMBINED P-VALUE = 1.87e-03  E-VALUE =     0.37
+  DIAGRAM: 229-[+1]-[+2]-254
+
+         [+1]     [+2]
+         9.4e-06  2.2e-05
+         GGGTGTGGCTGGGTGGA
+         +++++ +++++++++++
+226  GTTGGGGTGGGGCTGGGTGGGACTGGGCACAGTGTTATCAATAGTGCCAGCCAGAGATCACAGGACAACTTGAAG
+
+
+chr8:97323995-97324495
+  LENGTH = 500  COMBINED P-VALUE = 1.87e-03  E-VALUE =     0.37
+  DIAGRAM: 184-[-1]-307
+
+                                       [-1]
+                                       9.4e-06
+                                       GCCACACCC
+                                       +++ +++++
+151  NNNNNGGGTCGAGGAGATCACCTAAGAGGAAGGAGCCCCACCCACCCCTGCTCCTATGGGAAGAAGGCAAGGTGG
+
+
+chr9:120025371-120025871
+  LENGTH = 500  COMBINED P-VALUE = 2.02e-03  E-VALUE =      0.4
+  DIAGRAM: 202-[+1]-39-[-2]-242
+
+                                                         [+1]
+                                                         4.9e-06
+                                                         GGGTGTGGC
+                                                         +++++++++
+151  CCTGAAGGATCTCAGAGGAGAAACCACAGATGCATATGTGGAGAAAGGAGCTGGGTGTGGTGGGCCGACCTGCTG
+
+                              [-2]
+                              4.6e-05
+                              TCCACCCA
+                              ++++++++
+226  ACGCCTTGTTCTCTTGTCTTGCAGTTACACCCAGTGATTAAGGCTTTCCTCTGCGGCTCCATCAGCGGGACCTGT
+
+
+chr1:173447614-173448114
+  LENGTH = 500  COMBINED P-VALUE = 2.25e-03  E-VALUE =     0.45
+  DIAGRAM: 376-[-1]-115
+
+      [-1]
+      1.2e-05
+      GCCACACCC
+      +++++ +++
+376  AGCCACTCCCACCCAGCACATAATTCTGTGACACACAGNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNCA
+
+
+chr6:81915769-81916269
+  LENGTH = 500  COMBINED P-VALUE = 2.33e-03  E-VALUE =     0.47
+  DIAGRAM: 201-[+1]-290
+
+                                                        [+1]
+                                                        2.2e-06
+                                                        GGGTGTGGC
+                                                        +++++++++
+151  CATGTCTACACCCTCAATGAAGGACTACAACTCCCAGAAGTCAGTGCGATGGGGTGTGGCCGGACGGTGGCTCCT
+
+
+chr13:112863645-112864145
+  LENGTH = 500  COMBINED P-VALUE = 2.47e-03  E-VALUE =     0.49
+  DIAGRAM: 231-[+2]-36-[-1]-216
+
+           [+2]                                        [-1]
+           5.8e-05                                     4.9e-06
+           TGGGTGGA                                    GCCACACCC
+           ++++++++                                    +++++++++
+226  CCAGGTAGGGTGGAGCCCAGATGTGAGCTCCTCTAGCTGCTCACACTCTGACCACACCCAAATCTGCATATGGAA
+
+
+chr13:3866266-3866766
+  LENGTH = 500  COMBINED P-VALUE = 2.60e-03  E-VALUE =     0.52
+  DIAGRAM: 270-[-1]-221
+
+                                                  [-1]
+                                                  2.2e-06
+                                                  GCCACACCC
+                                                  +++++++++
+226  CCTTTCCAGTGTGATTATCAGGGCGGGTTTGTACCTAGCCGTTCAGCCACACCCTTCTGGGTTGGTCCTGTTTGG
+
+
+chr14:63796627-63797127
+  LENGTH = 500  COMBINED P-VALUE = 2.76e-03  E-VALUE =     0.55
+  DIAGRAM: 100-[-2]-142-[-1]-241
+
+                              [-2]
+                              6.6e-05
+                              TCCACCCA
+                              ++++++++
+76   AGGAGGCGGGGCCAGCGCCGGACGTCCCGCCCACCTCCCGCCCTCCTCAACCGGCCGCGCCGCTCGCGCCTCCAG
+
+                              [-1]
+                              4.9e-06
+                              GCCACACCC
+                              +++++++++
+226  GAAGCCGGAGGAGCCTGGCGCGATGACCACACCCTAGAATTTGATTGGAGAGCTGGAAAGCAGCCAGCGAACACG
+
+
+chr6:121187425-121187925
+  LENGTH = 500  COMBINED P-VALUE = 2.78e-03  E-VALUE =     0.56
+  DIAGRAM: 379-[-1]-112
+
+         [-1]
+         2.2e-06
+         GCCACACCC
+         +++++++++
+376  CTAAGCCACACCCTGGCCTTAGAAACACCATGCCGCTGAGATGAATTGTCCCTAGGATGGCACCCAGGGAAATAA
+
+
+chr1:133343883-133344383
+  LENGTH = 500  COMBINED P-VALUE = 2.78e-03  E-VALUE =     0.56
+  DIAGRAM: 239-[+1]-252
+
+                   [+1]
+                   2.2e-06
+                   GGGTGTGGC
+                   +++++++++
+226  ACTGGGTAGTTGTAGGGTGTGGCCTGATTGATCATGGCAGCATACTTGGTGTTGTGGGCTAACCATGGGGATAAT
+
+
+chr5:33616214-33616714
+  LENGTH = 500  COMBINED P-VALUE = 2.78e-03  E-VALUE =     0.56
+  DIAGRAM: 254-[-1]-237
+
+                                  [-1]
+                                  2.2e-06
+                                  GCCACACCC
+                                  +++++++++
+226  ATGAAGGCAGGCCTGGAGGGCCTTACCCCGCCACACCCTGAAACAAACTGACAGGATCTGCAAAATGGCCTTGTG
+
+
+chr7:110976195-110976695
+  LENGTH = 500  COMBINED P-VALUE = 2.78e-03  E-VALUE =     0.56
+  DIAGRAM: 333-[+1]-158
+
+                                      [+1]
+                                      2.2e-06
+                                      GGGTGTGGC
+                                      +++++++++
+301  CTCTATCCTGTGTGAGCAGATTGGCCCTTACCAGGGTGTGGCTCTACGGAATCAGGCTTCGGTGATGACAAGCAT
+
+
+chr14:79702844-79703344
+  LENGTH = 500  COMBINED P-VALUE = 2.78e-03  E-VALUE =     0.56
+  DIAGRAM: 254-[-1]-237
+
+                                  [-1]
+                                  2.2e-06
+                                  GCCACACCC
+                                  +++++++++
+226  TGTCTCTTTTCAGCACCACTTTGAAGTTAGCCACACCCTGCCTCCCTAGGGTGAAGAAGAACTAAGCAGTCAAGG
+
+
+chr7:111007530-111008030
+  LENGTH = 500  COMBINED P-VALUE = 3.17e-03  E-VALUE =     0.63
+  DIAGRAM: 221-[+1]-270
+
+                                                                            [+1]
+                                                                            1.7e
+                                                                            GGGT
+                                                                            ++++
+151  TTTTATTTAAATAAGTAGAAGTAGAAAGAACTGGTGTTTTTCTTCTTCTGGGACTTGGGGTAGTGTCAGCTGGGT
+
+     
+     -05
+     GTGGC
+     + +++
+226  GGGGTCACAGACTGTGGTGACAGATAAGAGCCAGAGCTGCACAGAGCTGAGTCAAGGTTGAGGCCTCCGTGAGAT
+
+
+chr17:47735006-47735506
+  LENGTH = 500  COMBINED P-VALUE = 3.17e-03  E-VALUE =     0.63
+  DIAGRAM: 252-[+1]-111-[-1]-42-[+1]-28-[+1]-31
+
+                                [+1]
+                                1.7e-05
+                                GGGTGTGGC
+                                +++++ +++
+226  ATCTCTGGCTCCAGTCTGGAGAGGAGTGGGTGGGGTGAAGGACACTTGGCATGTAGATACCCTTCTCTTGACATC
+
+                                                                             [-1
+                                                                             9.5
+                                                                             GCC
+                                                                             +++
+301  TCTTGACAAGTGCTGTGTCTCGGACAGGGGTGGGGGACTTGGTGTCAGATGGAGGGTTGCTCTCACACCCTTGCC
+
+     ]                                               [+1]
+     e-05                                            9.5e-05
+     ACACCC                                          GGGTGTGGC
+     +++ ++                                          ++ ++++++
+376  ACATCCTCTTGCCAGTTTCTGAGAACTAAAGACCTGATTCCTGGGCTGGGCTGTGGCCTAACCTCCCCAGACTTC
+
+               [+1]
+               5.7e-05
+               GGGTGTGGC
+               +++ +++++
+451  CCAGTGCACAGGGGGTGGCCTTTCCACCTGCTTGCTGTCAGTGCTGTGAG
+
+
+chr1:156887119-156887619
+  LENGTH = 500  COMBINED P-VALUE = 3.19e-03  E-VALUE =     0.64
+  DIAGRAM: 304-[-1]-187
+
+         [-1]
+         4.9e-06
+         GCCACACCC
+         +++++++++
+301  GGTGACCACACCCAACAAGCTGGGCCAAGACGACTTTNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGCAC
+
+
+chr11:57590460-57590960
+  LENGTH = 500  COMBINED P-VALUE = 3.19e-03  E-VALUE =     0.64
+  DIAGRAM: 69-<-2>-224-[-1]-44-[-1]-137
+
+                                                                          <-2>
+                                                                          1.0e-0
+                                                                          TCCACC
+                                                                          ++++++
+1    GTTTTCCTTTCCCCACCATCAGAATAGAACTGCGCTGCCCAGACAGCACCCCTGCGTTCTGAAACAACTCCCACC
+
+     
+     4
+     CA
+     ++
+76   CTGGGAAATGGCACAAAGGACATCCTACATCTATCCTGGCAGGAGATAGAAAGACCCTCTCACCCTTTGAGAGCC
+
+      [-1]                                                 [-1]
+      4.4e-05                                              4.9e-06
+      GCCACACCC                                            GCCACACCC
+       ++++++++                                            +++++++++
+301  CTCCACACCCAAAGCCACTGTGGCCTCCATTCTGGACTGTAGTATCTGCCCAGGACCACACCCACCACGCCCCAT
+
+
+chr15:81700367-81700867
+  LENGTH = 500  COMBINED P-VALUE = 3.19e-03  E-VALUE =     0.64
+  DIAGRAM: 116-[-1]-110-[-1]-256
+
+                                              [-1]
+                                              3.7e-05
+                                              GCCACACCC
+                                                +++++++
+76   NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNACACACCCATTCGCAGGAGACAGCAAGGTACAT
+
+               [-1]
+               4.9e-06
+               GCCACACCC
+               +++++++++
+226  TCTTTATTAGACCACACCCAGTTTGGCTCACAGGCTTGAAGAAATTACCTAGATAACTAGCTGAACACTGCAATC
+
+
+chr4:43977111-43977611
+  LENGTH = 500  COMBINED P-VALUE = 3.19e-03  E-VALUE =     0.64
+  DIAGRAM: 232-[+1]-259
+
+            [+1]
+            4.9e-06
+            GGGTGTGGC
+            +++++++++
+226  CCTGGCTGGGTGTGGTCGCCAGTGATAACTTGCCTCCTAAGGCTCTTGCCCTGCTCAGACTGAGAGGGGACTCCT
+
+
+chr9:98389943-98390443
+  LENGTH = 500  COMBINED P-VALUE = 3.61e-03  E-VALUE =     0.72
+  DIAGRAM: 210-[-2]-41-[-1]-232
+
+                                                                 [-2]
+                                                                 4.6e-05
+                                                                 TCCACCCA
+                                                                 ++++++++
+151  TGTCTGTTTCCCCTTCTTGTCTTATATCAGCACCAACAGCTCTTTCTCTCTATGCCCATTTACACCCAGGCTTCC
+
+                                       [-1]
+                                       9.4e-06
+                                       GCCACACCC
+                                       +++ +++++
+226  TGCTCACCACAATTAATAGCCCTTCTTATCTTCAGCCCCACCCCACCAGGCCAGCTTGCCTTATATTCTTGCATG
+
+
+chr4:149892777-149893277
+  LENGTH = 500  COMBINED P-VALUE = 3.61e-03  E-VALUE =     0.72
+  DIAGRAM: 363-[+1]-128
+
+                                                                    [+1]
+                                                                    2.2e-06
+                                                                    GGGTGTGGC
+                                                                    +++++++++
+301  NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNAGGGGTGTGGCGAT
+
+
+chr6:135115628-135116128
+  LENGTH = 500  COMBINED P-VALUE = 3.96e-03  E-VALUE =     0.79
+  DIAGRAM: 240-[-2]-252
+
+                    [-2]
+                    2.2e-05
+                    TCCACCCA
+                    ++++++++
+226  CAAGCATTCTCAAGACCCACCCAACTAAGCACAGAGGGCTCCCCATCCCTCCCTCCCTGAGCAATGAAGAGCCTG
+
+
+chr15:58719281-58719781
+  LENGTH = 500  COMBINED P-VALUE = 4.32e-03  E-VALUE =     0.86
+  DIAGRAM: 260-[+2]-86-[+1]-137
+
+                                        [+2]
+                                        1.2e-05
+                                        TGGGTGGA
+                                        ++++++++
+226  GGGAAAGTGAGCAAACAAAGCCCAAACCACAAAACTGGGTGGAGGTGCCATCTTCCTGCTCCAAACACCTTCCCC
+
+                                                           [+1]
+                                                           4.4e-05
+                                                           GGGTGTGGC
+                                                           ++++++++
+301  CAAAAGGGTTCTGTTAAAGTCTGATAATTTTATTTACAGACCTCCTCCCTGTGCGGGTGTGGGGTGGAGTGGGAA
+
+
+chr15:79757891-79758391
+  LENGTH = 500  COMBINED P-VALUE = 4.39e-03  E-VALUE =     0.88
+  DIAGRAM: 313-[+2]-58-[-1]-69-[+1]-1-[-1]-24
+
+                  [+2]
+                  3.2e-05
+                  TGGGTGGA
+                  ++++++++
+301  CTGGAAACCTATCTGGGCGGAGCACGACGGCCTGCTGGAGATAAACACGACCACGTGACCGTAGCCCCGCCCCCG
+
+         [-1]
+         9.5e-05
+         GCCACACCC
+         ++++++ ++
+376  CACTGCCACAGCCCGGTAAACAAGCTCTACTACTGCACCCGACCCAGCTACGCAGTACCAGCGAGCTGGAGTCAG
+
+            [+1]      [-1]
+            1.7e-05   9.5e-05
+            GGGTGTGGC GCCACACCC
+            +++++ +++ ++ ++++++
+451  GCGATTGGGGTGGGGTCGCGACACCCCAGCAAGACAGGTCGCTGGGTCCC
+
+
+chr3:97461668-97462168
+  LENGTH = 500  COMBINED P-VALUE = 4.39e-03  E-VALUE =     0.88
+  DIAGRAM: 276-[+2]-27-[-1]-129-[+2]-43
+
+                                                        [+2]
+                                                        3.2e-05
+                                                        TGGGTGGA
+                                                        ++++++++
+226  CCATGGATAGACAAACTGCTTAGGAAGACAAGACGCCCCACTATCAAGCCCTGGGCGGACAGTTCACAGCCCTAA
+
+                [-1]
+                1.7e-05
+                GCCACACCC
+                +++ +++++
+301  TCCCGACCCGGACCCCACCCTCGGCCCCGCCCCAAGCCGGAGCTGCGCACGCACCCACCACAGAGGCGGTGCTGG
+
+                                                                               [
+                                                                               6
+                                                                               T
+                                                                               +
+376  TGGCTAGAGAGGCAGGCGACCCAGGCTGAGGAGGGGGCGGGGCTGGAGCGCAGGGGGCGGAACAAGAGGCTCGGT
+
+     +2]
+     .6e-05
+     GGGTGGA
+     +++++++
+451  GGGCGGGGCCAGAGGCAGAGGCGGTACCTCGTCGCGGGCCTTGTAGCCAT
+
+
+chr10:126642277-126642777
+  LENGTH = 500  COMBINED P-VALUE = 4.69e-03  E-VALUE =     0.94
+  DIAGRAM: 259-[-1]-232
+
+                                       [-1]
+                                       7.6e-06
+                                       GCCACACCC
+                                       + +++++++
+226  NGCGGTTTTAGACGATGCGTGCCCAGTGGGAAGAGACACACCCAGTTTCTGTTAAGTCAAACAGAAGCAAGCAGT
+
+
+chr10:59256089-59256589
+  LENGTH = 500  COMBINED P-VALUE = 4.69e-03  E-VALUE =     0.94
+  DIAGRAM: 301-[-1]-190
+
+      [-1]
+      7.6e-06
+      GCCACACCC
+      + +++++++
+301  GGACACACCCATATCACAGGTGGAGACACTGATACTGTCGACAGCCACAGCTGCTGTGTGGTAGTGTCTGCTCGG
+
+
+chr18:80416880-80417380
+  LENGTH = 500  COMBINED P-VALUE = 4.69e-03  E-VALUE =     0.94
+  DIAGRAM: 246-[-1]-245
+
+                          [-1]
+                          7.6e-06
+                          GCCACACCC
+                          + +++++++
+226  GAGGGCCTCTCACCCTTGGGAGACACACCCACCTTATCTCCTCTGAGTGCTCTGGCCTGNNNNNNNNNNNNNNNN
+
+
+chr9:21362671-21363171
+  LENGTH = 500  COMBINED P-VALUE = 4.69e-03  E-VALUE =     0.94
+  DIAGRAM: 108-[+2]-144-[+1]-231
+
+                                      [+2]
+                                      7.8e-05
+                                      TGGGTGGA
+                                      ++++++++
+76   CAGCTCTTCCATACCCACTGGGAAGAGTTCTGTTGGGTGTGCTGTTGGCTCTGGGAGAAGCGTGCGTGGAGGAGC
+
+                                        [+1]
+                                        7.6e-06
+                                        GGGTGTGGC
+                                        +++++++ +
+226  TCTATGTACAGGGTAGCAATTCCACCAACTCAGGAGGGTGTGTCAGACCTATCTTCCCTGTGCACTGTGACCTTC
+
+
+chr14:61272713-61273213
+  LENGTH = 500  COMBINED P-VALUE = 4.69e-03  E-VALUE =     0.94
+  DIAGRAM: 354-[+1]-137
+
+                                                           [+1]
+                                                           7.6e-06
+                                                           GGGTGTGGC
+                                                           +++++++ +
+301  TGACAGGCCTTCAACACAGCACACGGCCTGGCAGGGCTGATAAGGAGGAGCAGTGGGTGTGTCCTTCATCTTTCC
+
+
+chr10:128184604-128185104
+  LENGTH = 500  COMBINED P-VALUE = 5.29e-03  E-VALUE =      1.1
+  DIAGRAM: 192-[+1]-21-[+2]-270
+
+                                               [+1]                          [+2
+                                               1.2e-05                       5.8
+                                               GGGTGTGGC                     TGG
+                                               +++ +++++                     +++
+151  GGCTTTGGCGCTCCTTCCAAGAACAAGGCACAACCTAACAAAGGGAGTGGCCTCACTGTCCCGGTAGATTTAAGG
+
+     ]
+     e-05
+     GTGGA
+     +++++
+226  GTGGAACTGCTCGCGGTAGCCAAAGCTAATCCGAAGTGTGGGGCGCGGCTAATTAGAATACTGACTGGGTCCGCC
+
+
+chr14:21299130-21299630
+  LENGTH = 500  COMBINED P-VALUE = 5.34e-03  E-VALUE =      1.1
+  DIAGRAM: 4-[-1]-30-[+1]-157-[+2]-10-[+2]-265
+
+         [-1]                                   [+1]
+         5.7e-05                                5.7e-05
+         GCCACACCC                              GGGTGTGGC
+         + +++++++                              +++ +++++
+1    CAGCGTCACACCCTAGCCCGCTTTCCTGCAATATGGAGCCAGAGGGCGTGGCGCATGGGCGGCGCGAGGGTGCTA
+
+                                                                [+2]
+                                                                1.2e-05
+                                                                TGGGTGGA
+                                                                ++++++++
+151  ATATCTCAGCGAGGTAAATCTACTCCAGGTGGTGCTACTGTAGAAAGGAACTGCAGCTTTGGGTGGAGCCGCGCA
+
+       [+2]
+       3.2e-05
+       TGGGTGGA
+       ++++++++
+226  AGTGGGCGGAGCAGAGGGACTCAAAGATAGAGAGCTCCAGGCCTCCGGGGATCCTGAGAACCTAGGTTTGTTTCA
+
+
+chr15:91082416-91082916
+  LENGTH = 500  COMBINED P-VALUE = 5.63e-03  E-VALUE =      1.1
+  DIAGRAM: 246-[-1]-245
+
+                          [-1]
+                          4.9e-06
+                          GCCACACCC
+                          +++++++++
+226  AGCCTTTCAGAGATAAAAGGCACCACACCCTCCCAGCAGAGACATCTGTAGCCATAGTCTCTTATCAGGCTTTAT
+
+
+chr10:60612190-60612690
+  LENGTH = 500  COMBINED P-VALUE = 5.63e-03  E-VALUE =      1.1
+  DIAGRAM: 219-[+1]-272
+
+                                                                          [+1]
+                                                                          4.9e-0
+                                                                          GGGTGT
+                                                                          ++++++
+151  GCAGGTGACAGCACAGTGACAGCAGTGACAGCCAACTTTGCCCCCTTGTGAATGCTGATACTCAAATGAGGGTGT
+
+     
+     6
+     GGC
+     +++
+226  GGTTAGCAATGGCATTCTTATCTCCACCTAGTGTGTCCGAGATGGGACATTTTACCTCCTCTGCATCCCGTGACA
+
+
+chr1:88208803-88209303
+  LENGTH = 500  COMBINED P-VALUE = 5.63e-03  E-VALUE =      1.1
+  DIAGRAM: 329-[-1]-162
+
+                                  [-1]
+                                  4.9e-06
+                                  GCCACACCC
+                                  +++++++++
+301  AGTCCAATTTAAAGGGAACCCAGCCCTGCACCACACCCTATTAGAAAATATATANNNNNNNNNNNNNNNNNNNNN
+
+
+chr9:20561645-20562145
+  LENGTH = 500  COMBINED P-VALUE = 5.63e-03  E-VALUE =      1.1
+  DIAGRAM: 112-[-1]-7-[+1]-363
+
+                                          [-1]            [+1]
+                                          4.9e-06         9.5e-05
+                                          GCCACACCC       GGGTGTGGC
+                                          +++++++++        ++++++++
+76   CTATCTAAACGTTAGTGAGGGGAGAGGGGAAAGCACCACCACACCCTAGCTCCTGGTGTGGCTCCTGCTTCCCAG
+
+
+chr16:91086848-91087348
+  LENGTH = 500  COMBINED P-VALUE = 5.66e-03  E-VALUE =      1.1
+  DIAGRAM: 47-[+2]-84-[-1]-352
+
+                                                    [+2]
+                                                    7.8e-05
+                                                    TGGGTGGA
+                                                    ++++++++
+1    GCTTTGCTGCTTTTATTTTTTGGTGACCCATGGAAATCAATCAGGGTTGGGTGTGTGAAGCCTGGACGAAGCAAG
+
+                                                                     [-1]
+                                                                     9.4e-06
+                                                                     GCCACACCC
+                                                                     +++ +++++
+76   TGACCAGTGACCATTCTGCTAAGGAAAGCCAAGAGTTCTTCAAGGAGAGGAGGGCCCAGGAGCCGCCCCACCCNN
+
+
+chr19:56465963-56466463
+  LENGTH = 500  COMBINED P-VALUE = 5.66e-03  E-VALUE =      1.1
+  DIAGRAM: 310-[+1]-47-[+1]-29-[+1]-87
+
+               [+1]                                                    [+1]
+               4.4e-05                                                 9.4e-06
+               GGGTGTGGC                                               GGGTGTGGC
+               ++++++++                                                +++++ +++
+301  AGATAAGGCTGGGTGTGGGGAAGTCAGCCAGAGCGGAGGAAGCTGCATAGCAAGAAGCAGAGACTGGGGTGGGGC
+
+                                  [+1]
+                                  9.4e-06
+                                  GGGTGTGGC
+                                  +++++ +++
+376  TAGGGCAGTGTCTCACTAAGCAGAGGTTGGGGTGGGGCCAGAGGCTGCCCTCTCCTTGCTCAGAGGGACTCAAAG
+
+
+chr17:24289205-24289705
+  LENGTH = 500  COMBINED P-VALUE = 6.81e-03  E-VALUE =      1.4
+  DIAGRAM: 250-[+1]-10-[-1]-222
+
+                              [+1]               [-1]
+                              1.2e-05            4.4e-05
+                              GGGTGTGGC          GCCACACCC
+                              +++ +++++           ++++++++
+226  CACTACAGTGACTCAGCTAACCTCAGGGAGTGGCTGTCCCCCAATCCACACCCATACCACAGGCACGTCTGATGC
+
+
+chr12:27135944-27136444
+  LENGTH = 500  COMBINED P-VALUE = 6.96e-03  E-VALUE =      1.4
+  DIAGRAM: 282-[-1]-155-[-1]-45
+
+                                                              [-1]
+                                                              9.4e-06
+                                                              GCCACACCC
+                                                              +++ +++++
+226  GAGGCTGAGAAAACCCAGATAAAGAGGAACTGGGCATAGGAACCACCATTCAGCCAGGCCCCACCCTGCTAGCTC
+
+                                                                            [-1]
+                                                                            2.7e
+                                                                            GCCA
+                                                                            +++
+376  CTTTACTGGTTTCTGCAGCTTCCATTTTTACCTCTGTGTCCTGGGACCTCTCTCTTCCTGTCCTGATCCCTGCCC
+
+     
+     -05
+     CACCC
+     + +++
+451  CTCCCCTGCCTGAGAAGGGCAGGCACCCCCGGGGCTGAGATATCCCTTGC
+
+
+chr1:169322898-169323398
+  LENGTH = 500  COMBINED P-VALUE = 6.96e-03  E-VALUE =      1.4
+  DIAGRAM: 260-[-1]-231
+
+                                        [-1]
+                                        9.4e-06
+                                        GCCACACCC
+                                        +++ +++++
+226  CAGTGTCTCTTACTCCCTTCCACCACCCTGCAGGTGCCCCACCCTGTGGTTCTGGGTCTCCCTGTAGCGACACAA
+
+
+chr7:87847381-87847881
+  LENGTH = 500  COMBINED P-VALUE = 8.22e-03  E-VALUE =      1.6
+  DIAGRAM: 140-[-2]-90-[-1]-143-[-2]-102
+
+                                                                      [-2]
+                                                                      7.8e-05
+                                                                      TCCACCCA
+                                                                      ++++++++
+76   TGGCTGCTCAGTCTTCGTGGCTGCTCTGTCCTCCTGTGGAGCTCTTCTCTCACTGTGCCATGGATCACACCCAGG
+
+                  [-1]
+                  9.5e-05
+                  GCCACACCC
+                  ++ ++++++
+226  CTGAGTCAAGCTGGCAACACCCGAATCCAACGCCCAGTGTTTCTGTTACCAGAAGATAAGCTCTGGTGTGCCCAG
+
+                    [-2]
+                    1.2e-05
+                    TCCACCCA
+                    ++++++++
+376  GATTCTATGTCGAGGTCCACCCACCATCAGATATGTGTGAAGAAAAGAACCTAATCACAGAATTCATAGAGAGGG
+
+
+chr11:102236405-102236905
+  LENGTH = 500  COMBINED P-VALUE = 8.45e-03  E-VALUE =      1.7
+  DIAGRAM: 192-[-1]-14-[-1]-104-[+1]-163
+
+                                               [-1]                   [-1]
+                                               5.7e-05                2.7e-05
+                                               GCCACACCC              GCCACACCC
+                                               + +++++++              +++ + +++
+151  CTGCCTATATTGATGAAAAAACCCGAGTTCTCCTAGAAAAGGGTCACACCCTAACAGGAGGGACAGCCCCTCCCT
+
+                                 [+1]
+                                 1.5e-05
+                                 GGGTGTGGC
+                                 +++++++ +
+301  ATGGCAGAGTCACAGAGCCCAAGCCTATGGGTGTGTTCCCTGCCCTGTGTATGTCTAGGGGAAAAAGCTTAACAC
+
+
+chr11:60988820-60989320
+  LENGTH = 500  COMBINED P-VALUE = 8.87e-03  E-VALUE =      1.8
+  DIAGRAM: 119-[+1]-146-[+1]-217
+
+                                                 [+1]
+                                                 9.4e-06
+                                                 GGGTGTGGC
+                                                 +++++ +++
+76   TTGCACCGGCCTGAGCTCTGCCGCAAAGAGGCGGGGCGACGGAGGGGTGGGGCAGGGTAGGGCCTGCGTCTGCGA
+
+                                                      [+1]
+                                                      5.7e-05
+                                                      GGGTGTGGC
+                                                      +++ +++++
+226  TGCCATCTTGGCGACTGTGTTGGGTACCGCAATGCCACAGCTGGAGATTGGGCGTGGCAAGAATACAGATCTTCC
+
+
+chr13:100518008-100518508
+  LENGTH = 500  COMBINED P-VALUE = 9.08e-03  E-VALUE =      1.8
+  DIAGRAM: 283-[-2]-2-[-2]-85-[+1]-105
+
+                                                               [-2]      [-2]
+                                                               3.2e-05   3.2e-05
+                                                               TCCACCCA  TCCACCC
+                                                               ++++++++  +++++++
+226  GGCAGAGAAAAGAGGTGTGAGATAAACAGGAGCGGAGTCGAGATTCTGCAGAAACAGCTCCGCCCAGTTCCGCCC
+
+     
+     
+     A
+     +
+301  AAGCACAGCTGTCCCTGTTGCTGGGCTGTGCATATAACACTCAACACTACCGTTGACCTGTTGCAACTGAACTCT
+
+                [+1]
+                4.0e-05
+                GGGTGTGGC
+                +++ + + +
+376  ATGGTGAAGCGGGGAGGGTTAATTTTTGAGCTACCCACTCCAGACTCAGAATACCACATGACGCACTGAACTGAC
+
+
+chr16:49839621-49840121
+  LENGTH = 500  COMBINED P-VALUE = 1.04e-02  E-VALUE =      2.1
+  DIAGRAM: 276-[-1]-86-<-2>-121
+
+                                                        [-1]
+                                                        1.5e-05
+                                                        GCCACACCC
+                                                        + +++++++
+226  TATGAGCCGGTGCCAGCTGAGTCTAGATGGTAGAGTTTTACACTTGAATGAAACACACCCTGCCCTCGGTTCTGG
+
+                                                                            <-2>
+                                                                            1.0e
+                                                                            TCCA
+                                                                            ++++
+301  GAGCTCCACTCTGCTGCCTCCATCTGCTACCTCTGATAAATGCTCATATTTTAAATATGTTACAATCAGCATACG
+
+     
+     -04
+     CCCA
+     ++++
+376  CCCAGTGCGGTTTTGCCTGCTCTTTGCTGTAAACAGCTCCACAGAGGGGGGAAGGGTGCCCTATGCCACAGACAA
+
+
+chr5:37127175-37127675
+  LENGTH = 500  COMBINED P-VALUE = 1.08e-02  E-VALUE =      2.2
+  DIAGRAM: 253-[+1]-29-[+2]-201
+
+                                 [+1]                                  [+2]
+                                 2.7e-05                               5.8e-05
+                                 GGGTGTGGC                             TGGGTGGA
+                                 +++ + +++                             ++++++++
+226  TCTGTAGTAGCAGAAAGAAATGGAACGTGGGAGGGGCACAGTGAGGACAGCTTGGGAGCCCAGATAAGGGTGGAG
+
+
+chr9:59598186-59598686
+  LENGTH = 500  COMBINED P-VALUE = 1.08e-02  E-VALUE =      2.2
+  DIAGRAM: 45-[+1]-339-[+2]-99
+
+                                                  [+1]
+                                                  2.7e-05
+                                                  GGGTGTGGC
+                                                  +++ + +++
+1    ATGAATGGAAAGAAATACTTGGCCACGGGGGCGGGAACAAGTGGGGGGAGGGGCGTGCGTGTGTGGAAAAGGGGC
+
+                       [+2]
+                       5.8e-05
+                       TGGGTGGA
+                       ++++++++
+376  GGAGGCGGGGCCATTCGGAGGGTGGAAAATAGGCGTGTCCGCGCAAGCGCAGGCAGCCCGCTCCAGCAGCGTCAC
+
+
+chr12:114390660-114391160
+  LENGTH = 500  COMBINED P-VALUE = 1.21e-02  E-VALUE =      2.4
+  DIAGRAM: 69-[+2]-37-[-1]-140-[+1]-228
+
+                                                                          [+2]
+                                                                          6.6e-0
+                                                                          TGGGTG
+                                                                          ++++++
+1    GGGTCTCCCCTTCTCTGTGACCCTGGCCTCTGGATCCTGCTGTCTCTCCCGCCTTCTGTCTGTGCGCCTTGGGCG
+
+                                            [-1]
+     5                                      2.7e-05
+     GA                                     GCCACACCC
+     ++                                     +++ + +++
+76   GGGTCCCTGCTGGATAGGAAGGAACGCGGGACTAGGGTGGCCCCTCCCAATGCTAAGTAGAAACAGACGCCCAAA
+
+                                           [+1]
+                                           5.7e-05
+                                           GGGTGTGGC
+                                           +++++++ +
+226  GCGTGACTAAGAGGTCCCCTTGCCCCTGCTGAGGAGAAGGGTGTGCCCAGGTTTAGTGCAGAGGTCAGAGGACTT
+
+
+chr1:75175760-75176260
+  LENGTH = 500  COMBINED P-VALUE = 1.33e-02  E-VALUE =      2.7
+  DIAGRAM: 227-[-1]-264
+
+       [-1]
+       7.6e-06
+       GCCACACCC
+       + +++++++
+226  CAGACACACCCCATCCAATGCTGGGTAACCCCACCAGCTGGCTATCAGCTTCCAGCCACCGCCAGACACTCCATT
+
+
+chr6:35303481-35303981
+  LENGTH = 500  COMBINED P-VALUE = 1.49e-02  E-VALUE =        3
+  DIAGRAM: 429-[-1]-62
+
+                                                           [-1]
+                                                           9.4e-06
+                                                           GCCACACCC
+                                                           +++ +++++
+376  CCAGAATGTGCTGACTCTGTAACCATTCCTCACTTGGAACCAAGCTGGGGAAGCGCCCCACCCCCACCCCTCAAT
+
+
+chr18:23982470-23982970
+  LENGTH = 500  COMBINED P-VALUE = 1.56e-02  E-VALUE =      3.1
+  DIAGRAM: 39-[-2]-453
+
+                                            [-2]
+                                            2.2e-05
+                                            TCCACCCA
+                                            ++++++++
+1    TCTGGAGGAGCTGGGCCCTGTGTGTGTAGTCACAGGCTTCCCACCCACCTTCGGAGAAGCAGACTAGAACCTACG
+
+
+chr11:117642060-117642560
+  LENGTH = 500  COMBINED P-VALUE = 1.56e-02  E-VALUE =      3.1
+  DIAGRAM: 30-[-2]-24-[-2]-430
+
+                                   [-2]                            [-2]
+                                   5.8e-05                         2.2e-05
+                                   TCCACCCA                        TCCACCCA
+                                   ++++++++                        ++++++++
+1    GCAAGCCAGCCTCAGACTCCACCCCAGCACTCCACCCTCAAGTCTGAGTAAAGTAGGCGTGTCCCACCCACTATT
+
+
+chr14:47973722-47974222
+  LENGTH = 500  COMBINED P-VALUE = 1.70e-02  E-VALUE =      3.4
+  DIAGRAM: 25-[+1]-191-<+2>-267
+
+                              [+1]
+                              2.7e-05
+                              GGGTGTGGC
+                              +++ + +++
+1    CATAGTTTGACTCCAAACTGTGCCTGGGAGGGGCCTGGAATGAATGAACTGCTGGGGAGGGGACAGCGGCTTGCT
+
+     <+2>
+     1.0e-04
+     TGGGTGGA
+     ++++++++
+226  TGGGCGTAGGCACTGCTGGGTTTCATTCTTGCAACATAAAGAGCTAACAGAGTCCAGACAGAATCTAGCCTGGGT
+
+
+chr13:81067500-81068000
+  LENGTH = 500  COMBINED P-VALUE = 1.94e-02  E-VALUE =      3.9
+  DIAGRAM: 266-[+1]-225
+
+                                              [+1]
+                                              1.7e-05
+                                              GGGTGTGGC
+                                              +++++ +++
+226  GTGGTAGAAACTGCACTAATATTTACATAAAGGGCGTGGTGGGGTGGGGTAGCAGCAAAGCCTGACTGAAGTGGG
+
+
+chr5:97380648-97381148
+  LENGTH = 500  COMBINED P-VALUE = 2.10e-02  E-VALUE =      4.2
+  DIAGRAM: 368-[+2]-124
+
+                                                                         [+2]
+                                                                         1.2e-05
+                                                                         TGGGTGG
+                                                                         +++++++
+301  CCCTATCTGTCTCCAGAGCCTGGTCATGTGCTATGATATGAGCAGTAGGAACAGCTCAGTGACATGCATGGGTGG
+
+     
+     
+     A
+     +
+376  AAAGAAGTGACAGATCACAAGAATGCTACAGGAGAGAAACCAAAATAGACATGAAGGCTGCAGAACATTGCCAAC
+
+
+chr10:75308229-75308729
+  LENGTH = 500  COMBINED P-VALUE = 2.13e-02  E-VALUE =      4.3
+  DIAGRAM: 388-[+1]-103
+
+                  [+1]
+                  3.5e-05
+                  GGGTGTGGC
+                  +++ + +++
+376  CCTTTGAGGGTGGGGGAGGGGTGGGCAACTCTCTGGGGATAACAGCACCTTAGAGGCAAAGTTCAGATGGGGACA
+
+
+chr1:36977019-36977519
+  LENGTH = 500  COMBINED P-VALUE = 2.14e-02  E-VALUE =      4.3
+  DIAGRAM: 392-[-1]-99
+
+                      [-1]
+                      4.4e-05
+                      GCCACACCC
+                       ++++++++
+376  GTGAGTCAGAATCTATCTCCACACCCACCTGGTGAAGACTGTTCCATCCTTCTCTATAGACAGTCTGCTCACAGG
+
+
+chr3:96108390-96108890
+  LENGTH = 500  COMBINED P-VALUE = 2.14e-02  E-VALUE =      4.3
+  DIAGRAM: 479-[+1]-12
+
+                                  [+1]
+                                  4.4e-05
+                                  GGGTGTGGC
+                                  ++++++++
+451  AGGGGGCTGGCAAAGCCTGTTTCTGATCTGGGTGTGGACCACATAATGTG
+
+
+chr1:134264178-134264678
+  LENGTH = 500  COMBINED P-VALUE = 2.26e-02  E-VALUE =      4.5
+  DIAGRAM: 451-[-2]-41
+
+      [-2]
+      2.2e-05
+      TCCACCCA
+      ++++++++
+451  CCCCACCCAGGATCTTGGAAACTATGCAAACATGTGTCAGCTGATGACTT
+
+
+chr11:105013714-105014214
+  LENGTH = 500  COMBINED P-VALUE = 2.30e-02  E-VALUE =      4.6
+  DIAGRAM: 309-[+1]-111-[+2]-63
+
+              [+1]
+              5.7e-05
+              GGGTGTGGC
+              +++++++ +
+301  GTGTCAGATGGGTGTGCCCCTTTCACCAGAGGCCCACACGGCCCCCCAGGGCACAGTGACACCACCCTTCCTGAA
+
+                                                           [+2]
+                                                           6.6e-05
+                                                           TGGGTGGA
+                                                           ++++++++
+376  TGCCTATTCTACAACCATAAGGTTTCTAAATGTACGGCATGGAGCACTGGCAGCTGGGCGGGTAGGTTCTAGATG
+
+
+chr11:80597918-80598418
+  LENGTH = 500  COMBINED P-VALUE = 2.42e-02  E-VALUE =      4.8
+  DIAGRAM: 304-[-1]-187
+
+         [-1]
+         1.5e-05
+         GCCACACCC
+         + +++++++
+301  GTAAAACACACCCNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+
+chr3:88305500-88306000
+  LENGTH = 500  COMBINED P-VALUE = 2.61e-02  E-VALUE =      5.2
+  DIAGRAM: 233-[+1]-258
+
+             [+1]
+             1.2e-05
+             GGGTGTGGC
+             +++ +++++
+226  NNTGCAATGGGAGTGGCCTGAGGCTCCCTAACGGCTGGATTTCAAAAATGTCATTGTATTCCAGAGGTTTAGTAA
+
+
+chr4:109112541-109113041
+  LENGTH = 500  COMBINED P-VALUE = 2.63e-02  E-VALUE =      5.3
+  DIAGRAM: 28-[-1]-21-[+1]-189-<+2>-236
+
+                                 [-1]                          [+1]
+                                 5.7e-05                       5.7e-05
+                                 GCCACACCC                     GGGTGTGGC
+                                 + +++++++                     +++++ +++
+1    CCCATACAGCTCGGGGTCTGAGATCCCAGTCACACCCAATGGCCAGGCAGCTGGTAGTGGGTGAGGCTCCAGTCA
+
+                                    <+2>
+                                    1.0e-04
+                                    TGGGTGGA
+                                    ++++++++
+226  TTAGACTTTTGTGGGCCCTCCCAGGAAGGCCTGGGCGTAGAGGAGAGATAACTAGGAGGCAGGCCTAGATGCATT
+
+
+chr15:78243390-78243890
+  LENGTH = 500  COMBINED P-VALUE = 2.63e-02  E-VALUE =      5.3
+  DIAGRAM: 238-[+1]-184-[-1]-60
+
+                  [+1]
+                  5.7e-05
+                  GGGTGTGGC
+                  +++++++ +
+226  GTACAGTGACTTTGGGTGTGACTTCGCCTTAGGCTGGCCATCTGTGTGTGGGGCGGTGCCTAACTCTGCTGGCTG
+
+                                                             [-1]
+                                                             9.5e-05
+                                                             GCCACACCC
+                                                             ++++++ ++
+376  AGATATCACTCATAGTGTGGCCTTCCCTGTGTTCCCCCGTGCAGGCATCGAACCTGGCCACATCCCTGGCTCAGT
+
+
+chr12:70860461-70860961
+  LENGTH = 500  COMBINED P-VALUE = 2.66e-02  E-VALUE =      5.3
+  DIAGRAM: 258-[-2]-234
+
+                                      [-2]
+                                      1.2e-05
+                                      TCCACCCA
+                                      ++++++++
+226  CCAGGGCAGACACTAGGACTTGGCGCCTAGGACTCCACCCATTGTAACTGCAGCAAGCATCTGGAGTTACCTCTT
+
+
+chr15:76778491-76778991
+  LENGTH = 500  COMBINED P-VALUE = 2.66e-02  E-VALUE =      5.3
+  DIAGRAM: 330-[-2]-162
+
+                                   [-2]
+                                   1.2e-05
+                                   TCCACCCA
+                                   ++++++++
+301  AAAATTACAAGCACAGCCTGAGGCGCTCCATCCACCCAAGTGCTTTCTGTCCGGCGCTGAGCGCTTGCTCTGGCT
+
+
+chr9:24715045-24715545
+  LENGTH = 500  COMBINED P-VALUE = 2.80e-02  E-VALUE =      5.6
+  DIAGRAM: 152-[+1]-230-[+1]-100
+
+       [+1]
+       9.5e-05
+       GGGTGTGGC
+       ++++ ++++
+151  GGGGGTATGGCAACAGGAGGAGTGTGTGAGGATTTATTCCCATTTTCTGACCCGTGTATTTCTAAGGAGAAGGCA
+
+                     [+1]
+                     2.7e-05
+                     GGGTGTGGC
+                     +++ + +++
+376  GTGGAGGAGACACACAGGGAGGGGCCACTGTGTTGTTAGGCAACAGAACCCAAAGTCCTGAATAACATGAGACAG
+
+
+chr13:54345922-54346422
+  LENGTH = 500  COMBINED P-VALUE = 3.82e-02  E-VALUE =      7.6
+  DIAGRAM: 478-[+1]-13
+
+                                 [+1]
+                                 5.7e-05
+                                 GGGTGTGGC
+                                 +++++++ +
+451  CCAAGGAGCTAAGTTATGGTACAAGTCAGGGTGTGCCCCCTGGGAGGCTC
+
+
+chr11:32150818-32151318
+  LENGTH = 500  COMBINED P-VALUE = 3.96e-02  E-VALUE =      7.9
+  DIAGRAM: 160-[-2]-39-[-2]-5-[+2]-272
+
+               [-2]                                           [-2]         [+2]
+               4.6e-05                                        7.8e-05      5.8e-
+               TCCACCCA                                       TCCACCCA     TGGGT
+               ++++++++                                       ++++++++     +++++
+151  CAAAGTAGCATACACCCATCTGGAACCTATCAGTGACCATAGTCAACAGCAGGTGTACACACCCAGGCCAAGGGT
+
+     
+     05
+     GGA
+     +++
+226  GGAGCAGACCACTGTGGGATCTATGGAGATGCTTGAACGAGCAGATAACTAAGCCAAGCATGACTCAGAGTTTCT
+
+
+chr7:103853792-103854292
+  LENGTH = 500  COMBINED P-VALUE = 4.05e-02  E-VALUE =      8.1
+  DIAGRAM: 288-[+1]-203
+
+                                                                    [+1]
+                                                                    5.7e-05
+                                                                    GGGTGTGGC
+                                                                    +++ +++++
+226  AAAGTGGTTACAAAGAACTGCTCAGGAAAATCTGATGGCTTCAACTTAACTAAATGACAGTATGGGCGTGGCAAG
+
+
+chr7:104332488-104332988
+  LENGTH = 500  COMBINED P-VALUE = 4.87e-02  E-VALUE =      9.7
+  DIAGRAM: 224-[-1]-267
+
+                                                                               [
+                                                                               1
+                                                                               G
+                                                                               +
+151  CAACATGGTCTTTCTATCATTCATCTTATCATTCTGCTGTCTGTCTGAAGCAAGTTGTCTTTGGCTTATCTGCTG
+
+     -1]
+     .2e-05
+     CCACACCC
+     ++++ +++
+226  CCACTCCCCTCCTGCTGCTGTGTTAGTTCCCACTCTTGTGACCATAAGCCTCATAAGTGCTCTTTTAACCACCAT
+
+
+chr7:36132953-36133453
+  LENGTH = 500  COMBINED P-VALUE = 4.87e-02  E-VALUE =      9.7
+  DIAGRAM: 164-[-1]-327
+
+                   [-1]
+                   2.5e-05
+                   GCCACACCC
+                   + +++ +++
+151  ACTCCGCCTACCGGGACACTCCCAGGGAGTAGCCACTGGCCCTGAAGATAAGCCTCACCAAGGAATTCATTCAGA
+
+********************************************************************************
+
+
+CPU: Timothys-iMac.rd.unr.edu
+Time 0.022 secs.
+
+mast -oc results/mast24 -nostatus meme/meme.Klf1-200.cd.zoops.html common/Klf1-200.fa

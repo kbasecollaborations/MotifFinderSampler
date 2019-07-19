@@ -1,0 +1,574 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.0.0 (Release date: Fri Sep 29 13:40:17 2017 -0700)
+
+For further information on how to interpret these results or to get
+a copy of the MEME software please access http://meme-suite.org .
+
+This file may be used as input to the MAST algorithm for searching
+sequence databases for matches to groups of motifs.  MAST is available
+for interactive use and downloading at http://meme-suite.org .
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= common/adh.s
+CONTROL SEQUENCES= Primary sequences shuffled preserving 3-mers
+ALPHABET= ACDEFGHIKLMNPQRSTVWY
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+2BHD_STREX               1.0000    255  3BHD_COMTE               1.0000    253  
+ADH_DROME                1.0000    255  AP27_MOUSE               1.0000    244  
+BA72_EUBSP               1.0000    249  BDH_HUMAN                1.0000    343  
+BPHB_PSEPS               1.0000    275  BUDC_KLETE               1.0000    241  
+DHES_HUMAN               1.0000    327  DHGB_BACME               1.0000    262  
+DHII_HUMAN               1.0000    292  DHMA_FLAS1               1.0000    270  
+ENTA_ECOLI               1.0000    248  FIXR_BRAJA               1.0000    278  
+GUTD_ECOLI               1.0000    259  HDE_CANTR                1.0000    906  
+HDHA_ECOLI               1.0000    255  LIGD_PSEPA               1.0000    305  
+NODG_RHIME               1.0000    245  RIDH_KLEAE               1.0000    249  
+YINL_LISMO               1.0000    248  YRTP_BACSU               1.0000    238  
+CSGA_MYXXA               1.0000    166  DHB2_HUMAN               1.0000    387  
+DHB3_HUMAN               1.0000    310  DHCA_HUMAN               1.0000    276  
+FABI_ECOLI               1.0000    262  FVT1_HUMAN               1.0000    332  
+HMTR_LEIMA               1.0000    287  MAS1_AGRRA               1.0000    476  
+PCR_PEA                  1.0000    399  RFBB_NEIGO               1.0000    346  
+YURA_MYXXA               1.0000    258  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme common/adh.s -oc results/meme24 -mod anr -protein -nmotifs 2 -objfun de -w 12 -hsfrac 0.6 -shuf 3 -nostatus 
+
+model:  mod=           anr    nmotifs=         2    evt=           inf
+objective function:           em=       Differential Enrichment mHG
+                              starts=   log likelihood ratio (LLR)
+width:  minw=           12    maxw=           12
+nsites: minsites=        2    maxsites=      165    wnsites=       0.8
+theta:  spmap=         pam    spfuzz=        120
+em:     prior=       megap    b=           49975    maxiter=        50
+        distance=    1e-05
+data:   n=            9996    N=              33
+sample: seed=            0    hsfrac=        0.6
+        searchsize=   9996    norand=         no    csites=         -1
+Dirichlet mixture priors file: prior30.plib
+Letter frequencies in dataset:
+A 0.111 C 0.0121 D 0.0502 E 0.0553 F 0.0359 G 0.0898 H 0.0182 I 0.0566 K 0.0518 
+L 0.0919 M 0.0272 N 0.0405 P 0.0405 Q 0.0294 R 0.0494 S 0.0637 T 0.0565 V 0.083 
+W 0.0095 Y 0.027 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.111 C 0.0122 D 0.0502 E 0.0553 F 0.0359 G 0.0898 H 0.0183 I 0.0566 K 0.0518 
+L 0.0919 M 0.0273 N 0.0405 P 0.0405 Q 0.0295 R 0.0494 S 0.0637 T 0.0565 V 0.083 
+W 0.00959 Y 0.0271 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF PHGIRVNAVAPG MEME-1	width =  12  sites =  22  llr = 416  p-value = 6.8e-002  E-value = 6.8e-002
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::::::3:3::
+pos.-specific     C  :::::::1:1::
+probability       D  :1::::::::::
+matrix            E  :1::::::::::
+                  F  ::::::::1:::
+                  G  2:4::::2:1:8
+                  H  :2:::::::1::
+                  I  :::7::::4:::
+                  K  111:1:::::::
+                  L  :1::1:::::::
+                  M  ::::::::::::
+                  N  ::3:::8:::::
+                  P  4:::::::::9:
+                  Q  ::::::::::::
+                  R  1:::6:::::::
+                  S  ::::::11:1::
+                  T  1:::1::::1::
+                  V  :::3:9:15:::
+                  W  ::::::::::::
+                  Y  :1::::::::::
+
+         bits    6.7             
+                 6.0             
+                 5.4             
+                 4.7             
+Relative         4.0           * 
+Entropy          3.4    *  *   * 
+(27.3 bits)      2.7    ****   **
+                 2.0   ***** * **
+                 1.3 ************
+                 0.7 ************
+                 0.0 ------------
+
+Multilevel           PXGIRVNAVAPG
+consensus              NV   GI   
+sequence                         
+                                 
+                                 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                Site  
+-------------             ----- ---------            ------------
+FIXR_BRAJA                  209  8.81e-15 LTRELAHDYA PHGIRVNAIAPG EIRTDMLSPD
+HDHA_ECOLI                  179  1.02e-11 LVRNMAFDLG EKNIRVNGIAPG AILTDALKSV
+DHGB_BACME                  180  1.16e-11 MTETLALEYA PKGIRVNNIGPG AINTPINAEK
+HMTR_LEIMA                  213  5.34e-11 LTRSAALELA PLQIRVNGVGPG LSVLVDDMPP
+2BHD_STREX                  172  1.37e-10 LSKLAAVELG TDRIRVNSVHPG MTYTPMTAET
+BUDC_KLETE                  172  1.52e-10 LTQTAARDLA PLGITVNGFCPG IVKTPMWAEI
+NODG_RHIME                  172  1.68e-10 FSKSLAQEIA TRNITVNCVAPG FIESAMTDKL
+DHMA_FLAS1                  185  1.68e-10 LTRAMAVDLA RHGILVNMIAPG PVDVTGNNTG
+AP27_MOUSE                  169  3.00e-10 LTKAMAMELG PHKIRVNSVNPT VVLTDMGKKV
+FABI_ECOLI                  179  1.80e-09 NVRYMANAMG PEGVRVNAISAG PIRTLAASGI
+3BHD_COMTE                  173  2.98e-09 RAAALSCRKQ GYAIRVNSIHPD GIYTPMMQAS
+HDE_CANTR                   487  3.24e-09 LSKTMAIEGA KNNIKVNIVAPH AETAMTLTIF
+BA72_EUBSP                  177  3.52e-09 LTHGLGREII RKNIRVVGVAPG VVNTDMTNGN
+BPHB_PSEPS                  172  7.29e-09 GLVRELAFEL APYVRVNGVGPG GMNSDMRGPS
+ENTA_ECOLI                  164  8.54e-09 LALSVGLELA GSGVRCNVVSPG STDTDMQRTL
+YURA_MYXXA                  180  1.36e-08 FMESLRVDLR GTGVRVTCIYPG FVKSELTATN
+HDE_CANTR                   183  2.50e-08 FAETLAKEGA KYNIKANAIAPL ARSRMTESIL
+DHCA_HUMAN                  217  2.69e-08 HARKLSEQRK GDKILLNACCPG WVRTDMAGPK
+RIDH_KLEAE                  180  3.62e-08 FVHTTRRQVA QYGVRVGAVLPG PVVTALLDDW
+YRTP_BACSU                  175  4.19e-08 LTESLMQEVR KHNIRVSALTPS TVASDMSIEL
+BDH_HUMAN                   228  4.85e-08 FSDCLRYEMY PLGVKVSVVEPG NFIAATSLYN
+YINL_LISMO                  231  7.72e-07 ASIVAYAIDQ PEDVNVNEFTVG PTSQPW    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+FIXR_BRAJA                        8.8e-15  208_[1]_58
+HDHA_ECOLI                          1e-11  178_[1]_65
+DHGB_BACME                        1.2e-11  179_[1]_71
+HMTR_LEIMA                        5.3e-11  212_[1]_63
+2BHD_STREX                        1.4e-10  171_[1]_72
+BUDC_KLETE                        1.5e-10  171_[1]_58
+NODG_RHIME                        1.7e-10  171_[1]_62
+DHMA_FLAS1                        1.7e-10  184_[1]_74
+AP27_MOUSE                          3e-10  168_[1]_64
+FABI_ECOLI                        1.8e-09  178_[1]_72
+3BHD_COMTE                          3e-09  172_[1]_69
+HDE_CANTR                         2.5e-08  182_[1]_292_[1]_408
+BA72_EUBSP                        3.5e-09  176_[1]_61
+BPHB_PSEPS                        7.3e-09  171_[1]_92
+ENTA_ECOLI                        8.5e-09  163_[1]_73
+YURA_MYXXA                        1.4e-08  179_[1]_67
+DHCA_HUMAN                        2.7e-08  216_[1]_48
+RIDH_KLEAE                        3.6e-08  179_[1]_58
+YRTP_BACSU                        4.2e-08  174_[1]_52
+BDH_HUMAN                         4.8e-08  227_[1]_104
+YINL_LISMO                        7.7e-07  230_[1]_6
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF PHGIRVNAVAPG width=12 seqs=22
+FIXR_BRAJA               (  209) PHGIRVNAIAPG  1 
+HDHA_ECOLI               (  179) EKNIRVNGIAPG  1 
+DHGB_BACME               (  180) PKGIRVNNIGPG  1 
+HMTR_LEIMA               (  213) PLQIRVNGVGPG  1 
+2BHD_STREX               (  172) TDRIRVNSVHPG  1 
+BUDC_KLETE               (  172) PLGITVNGFCPG  1 
+NODG_RHIME               (  172) TRNITVNCVAPG  1 
+DHMA_FLAS1               (  185) RHGILVNMIAPG  1 
+AP27_MOUSE               (  169) PHKIRVNSVNPT  1 
+FABI_ECOLI               (  179) PEGVRVNAISAG  1 
+3BHD_COMTE               (  173) GYAIRVNSIHPD  1 
+HDE_CANTR                (  487) KNNIKVNIVAPH  1 
+BA72_EUBSP               (  177) RKNIRVVGVAPG  1 
+BPHB_PSEPS               (  172) APYVRVNGVGPG  1 
+ENTA_ECOLI               (  164) GSGVRCNVVSPG  1 
+YURA_MYXXA               (  180) GTGVRVTCIYPG  1 
+HDE_CANTR                (  183) KYNIKANAIAPL  1 
+DHCA_HUMAN               (  217) GDKILLNACCPG  1 
+RIDH_KLEAE               (  180) QYGVRVGAVLPG  1 
+YRTP_BACSU               (  175) KHNIRVSALTPS  1 
+BDH_HUMAN                (  228) PLGVKVSVVEPG  1 
+YINL_LISMO               (  231) PEDVNVNEFTVG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 20 w= 12 n= 9632 bayes= 7.75447 E= 6.8e-002 
+  -105   -292   -192      5   -337     67   -130   -338    132   -323   -261   -154    291     81     79   -167     54   -331   -310   -263 
+  -223   -274     72     79   -310   -313    295   -315    133     27   -235     31     -1    -46      8    -16    -14   -308   -286    195 
+  -110   -320      5   -145   -371    192   -144   -381     86   -367   -302    253   -301     78      1   -177   -215   -373   -344     55 
+  -473   -309   -634   -613   -399   -690   -619    352   -590   -260   -288   -574   -612   -576   -639   -563   -398    190   -555   -496 
+  -447   -371   -462   -332   -535   -495   -214   -462    143    -31   -393     -3   -434   -150    366   -368     39   -485   -373   -405 
+  -130     64   -365   -330   -280   -441   -266    -18   -338   -149   -222   -352   -320   -310   -313   -316   -174    323   -343   -384 
+  -424   -263   -212   -392   -360   -260    -61   -330   -301   -421   -354    437   -363   -223   -341    -77   -161   -259   -283   -324 
+   171    236   -340    -60   -233     76   -237    -34   -258   -217     42    -25   -355   -218   -284     75   -199     -1   -253   -253 
+  -447    178   -644   -595    122   -652   -535    266   -575    -72   -273   -557   -578   -527   -592   -522   -378    240   -478   -450 
+   148    240   -188     -2   -299     20    191   -289   -103   -110   -228     15   -272    -74   -162     44     47   -264   -283     39 
+  -131   -302   -349   -321   -401   -414   -293   -395   -300   -380   -381   -348    438   -251   -332   -247   -289   -132   -423   -427 
+  -300   -312    -98   -350   -461    321     18   -480   -333   -212   -426   -242   -400   -347   -338   -116   -132   -467   -353   -404 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 20 w= 12 nsites= 22 E= 6.8e-002 
+ 0.045455  0.000000  0.000000  0.045455  0.000000  0.181818  0.000000  0.000000  0.136364  0.000000  0.000000  0.000000  0.363636  0.045455  0.090909  0.000000  0.090909  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.090909  0.090909  0.000000  0.000000  0.181818  0.000000  0.136364  0.136364  0.000000  0.045455  0.045455  0.000000  0.045455  0.045455  0.045455  0.000000  0.000000  0.136364 
+ 0.045455  0.000000  0.045455  0.000000  0.000000  0.409091  0.000000  0.000000  0.090909  0.000000  0.000000  0.272727  0.000000  0.045455  0.045455  0.000000  0.000000  0.000000  0.000000  0.045455 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.681818  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.318182  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.136364  0.090909  0.000000  0.045455  0.000000  0.000000  0.636364  0.000000  0.090909  0.000000  0.000000  0.000000 
+ 0.045455  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.863636  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.772727  0.000000  0.000000  0.000000  0.090909  0.045455  0.045455  0.000000  0.000000 
+ 0.272727  0.090909  0.000000  0.045455  0.000000  0.227273  0.000000  0.045455  0.000000  0.000000  0.045455  0.045455  0.000000  0.000000  0.000000  0.136364  0.000000  0.090909  0.000000  0.000000 
+ 0.000000  0.045455  0.000000  0.000000  0.090909  0.000000  0.000000  0.363636  0.000000  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.454545  0.000000  0.000000 
+ 0.318182  0.090909  0.000000  0.045455  0.000000  0.136364  0.090909  0.000000  0.000000  0.045455  0.000000  0.045455  0.000000  0.000000  0.000000  0.090909  0.090909  0.000000  0.000000  0.045455 
+ 0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.909091  0.000000  0.000000  0.000000  0.000000  0.045455  0.000000  0.000000 
+ 0.000000  0.000000  0.045455  0.000000  0.000000  0.772727  0.045455  0.000000  0.000000  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.045455  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif PHGIRVNAVAPG MEME-1 regular expression
+--------------------------------------------------------------------------------
+PX[GN][IV]RVN[AG][VI]APG
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.09 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF KTVIITSVASKL MEME-2	width =  12  sites =  43  llr = 387  p-value = 5.5e-001  E-value = 5.5e-001
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  ::11:::23:11
+pos.-specific     C  ::::::::::::
+probability       D  ::::::1::1::
+matrix            E  :1:::1:::21:
+                  F  ::::::::::::
+                  G  ::::::2:122:
+                  H  ::::::::::::
+                  I  :1225::2:::2
+                  K  41::::1::13:
+                  L  :::2:::1:::3
+                  M  :::::::1::::
+                  N  :1:1:12::1::
+                  P  ::::::::::::
+                  Q  ::::::::::::
+                  R  2::::1::::::
+                  S  11:::12:321:
+                  T  12:::3:11:::
+                  V  :1414::2:::2
+                  W  ::::::::::::
+                  Y  :::::::::::1
+
+         bits    6.7             
+                 6.0             
+                 5.4             
+                 4.7             
+Relative         4.0             
+Entropy          3.4             
+(13.0 bits)      2.7     *       
+                 2.0     *       
+                 1.3 *   * * *   
+                 0.7 ************
+                 0.0 ------------
+
+Multilevel           KXVIITNXAXKL
+consensus            R  LV S S  I
+sequence                   G     
+                                 
+                                 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                Site  
+-------------             ----- ---------            ------------
+DHII_HUMAN                   35  1.23e-08 EEFRPEMLQG KKVIVTGASKGI GREMAYHLAK
+FABI_ECOLI                    7  3.79e-08     MGFLSG KRILVTGVASKL SIAYGIAQAM
+YINL_LISMO                    6  4.42e-08      MTIKN KVIIITGASSGI GKATALLLAE
+ENTA_ECOLI                    6  1.87e-07      MDFSG KNVWVTGAGKGI GYATALAFVE
+2BHD_STREX                    7  2.14e-07     MNDLSG KTVIITGGARGL GAEAARQAVA
+NODG_RHIME                  133  4.12e-07 TQQMIRRRNG RIINVTSVAGAI GNPGQTNYCA
+MAS1_AGRRA                  373  6.00e-07 LPHLYETGSG RIVNINSMSGQR VLNPLVGYNM
+GUTD_ECOLI                  135  6.79e-07 RLMIRDGIQG RIIQINSKSGKV GSKHNSGYSA
+DHB2_HUMAN                  141  2.18e-06 RLSVLQMDIT KPVQIKDAYSKV AAMLQDRGLW
+NODG_RHIME                    7  3.03e-06     MFELTG RKALVTGASGAI GGAIARVLHA
+DHII_HUMAN                  164  3.03e-06 ALPMLKQSNG SIVVVSSLAGKV AYPMVAAYSA
+DHGB_BACME                    8  4.63e-06    MYKDLEG KVVVITGSSTGL GKSMAIRFAT
+HMTR_LEIMA                  103  5.14e-06 VAACYTHWGR CDVLVNNASSFY PTPLLRNDED
+FVT1_HUMAN                  167  6.98e-06 ITTMKERRVG RIVFVSSQAGQL GLFGFTAYSA
+FVT1_HUMAN                   74  8.52e-06 RNEDKLLQAK KEIEMHSINDKQ VVLCISVDVS
+DHII_HUMAN                  264  8.52e-06 EEVYYDSSLW TTLLIRNPCRKI LEFLYSTSYN
+HDHA_ECOLI                  152  9.40e-06 LTITSMAAEN KNINMTSYASSK AAASHLVRNM
+DHB3_HUMAN                  176  1.38e-05 QLILKHMESR QKGLILNISSGI ALFPWPLYSM
+HDE_CANTR                   382  2.40e-05 WPDQHDVAKD SEAIIKNVIDKY GTIDILVNNA
+HDHA_ECOLI                  166  2.63e-05 MTSYASSKAA ASHLVRNMAFDL GEKNIRVNGI
+ADH_DROME                   186  2.63e-05 TAYTVNPGIT RTTLVHKFNSWL DVEPQVAEKL
+FABI_ECOLI                  218  2.87e-05 AHCEAVTPIR RTVTIEDVGNSA AFLCSDLSAG
+ENTA_ECOLI                  183  3.42e-05 SPGSTDTDMQ RTLWVSDDAEEQ RIRGFGEQFK
+YRTP_BACSU                   39  4.43e-05 EGVNIGLIGR TSANVEKVAEEV KALGVKAAFA
+RIDH_KLEAE                   40  4.43e-05 CARTLLGAGA KVVLIDREGEKL NKLVAELGEN
+DHGB_BACME                   21  4.43e-05 VITGSSTGLG KSMAIRFATEKA KVVVNYRSKE
+PCR_PEA                     384  6.71e-05 QLSQEASDAE KARKVWEVSEKL VGLA      
+BUDC_KLETE                   91  9.24e-05 NVIVNNAGIA PSTPIESITEEI VDRVYNINVK
+HMTR_LEIMA                  267  1.08e-04 SDVVIFLCSS KAKYITGTCVKV DGGYSLTRA 
+HDE_CANTR                    33  1.17e-04 YYSLEFAKLG AKVVVNDLGGAL NGQGGNSKAA
+RFBB_NEIGO                  185  1.36e-04 LVRAWQRTYR LPSIVSNCSNNY GPRQFPEKLI
+RFBB_NEIGO                   23  1.36e-04 GGAGFIGSAV VRHIIQNTRDSV VNLDKLTYAG
+FVT1_HUMAN                  189  1.47e-04 GLFGFTAYSA SKFAIRGLAEAL QMEVKPYNVY
+CSGA_MYXXA                   95  1.47e-04 AYAYRMSKAA LNMAVRSMSTDL RPEGFVTVLL
+DHB3_HUMAN                  240  1.70e-04 AVSTAMTKYL NTNVITKTADEF VKESLNYVTI
+HDE_CANTR                   731  1.83e-04 FEPIATTPKG TNVVIVHGSKSV DNKSGELIYS
+BA72_EUBSP                  135  1.83e-04 WCAYQCMKDA KKGVIINTASVT GIFGSLSGVG
+DHB3_HUMAN                  219  2.62e-04 SKALQEEYKA KEVIIQVLTPYA VSTAMTKYLN
+PCR_PEA                     220  2.81e-04 DLKKSDYPSK RLIIVGSITGNT NTLAGNVPPK
+HDHA_ECOLI                  198  3.02e-04 APGAILTDAL KSVITPEIEQKM LQHTPIRRLG
+AP27_MOUSE                  208  3.23e-04 RKLKERHPLR KFAEVEDVVNSI LFLLSDRSAS
+HDE_CANTR                   638  4.53e-04 EDDPVWRFDD RDVILYNIALGA TTKQLKYVYE
+MAS1_AGRRA                  133  5.87e-04 VVCSPLLRAI QTALIANIGFLC FDIDEDLKER
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+DHII_HUMAN                          3e-06  34_[2]_117_[2]_88_[2]_17
+FABI_ECOLI                        3.8e-08  6_[2]_199_[2]_33
+YINL_LISMO                        4.4e-08  5_[2]_231
+ENTA_ECOLI                        1.9e-07  5_[2]_165_[2]_54
+2BHD_STREX                        2.1e-07  6_[2]_237
+NODG_RHIME                        4.1e-07  6_[2]_114_[2]_101
+MAS1_AGRRA                        0.00059  132_[2]_228_[2]_92
+GUTD_ECOLI                        6.8e-07  134_[2]_113
+DHB2_HUMAN                        2.2e-06  140_[2]_235
+DHGB_BACME                        4.4e-05  7_[2]_1_[2]_230
+HMTR_LEIMA                        5.1e-06  102_[2]_152_[2]_9
+FVT1_HUMAN                        8.5e-06  73_[2]_81_[2]_10_[2]_132
+HDHA_ECOLI                        9.4e-06  151_[2]_2_[2]_20_[2]_46
+DHB3_HUMAN                        0.00026  175_[2]_31_[2]_9_[2]_59
+HDE_CANTR                         0.00012  32_[2]_337_[2]_244_[2]_81_[2]_164
+ADH_DROME                         2.6e-05  185_[2]_58
+YRTP_BACSU                        4.4e-05  38_[2]_188
+RIDH_KLEAE                        4.4e-05  39_[2]_198
+PCR_PEA                           6.7e-05  219_[2]_152_[2]_4
+BUDC_KLETE                        9.2e-05  90_[2]_139
+RFBB_NEIGO                        0.00014  22_[2]_150_[2]_150
+CSGA_MYXXA                        0.00015  94_[2]_60
+BA72_EUBSP                        0.00018  134_[2]_103
+AP27_MOUSE                        0.00032  207_[2]_25
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF KTVIITSVASKL width=12 seqs=43
+DHII_HUMAN               (   35) KKVIVTGASKGI  1 
+FABI_ECOLI               (    7) KRILVTGVASKL  1 
+YINL_LISMO               (    6) KVIIITGASSGI  1 
+ENTA_ECOLI               (    6) KNVWVTGAGKGI  1 
+2BHD_STREX               (    7) KTVIITGGARGL  1 
+NODG_RHIME               (  133) RIINVTSVAGAI  1 
+MAS1_AGRRA               (  373) RIVNINSMSGQR  1 
+GUTD_ECOLI               (  135) RIIQINSKSGKV  1 
+DHB2_HUMAN               (  141) KPVQIKDAYSKV  1 
+NODG_RHIME               (    7) RKALVTGASGAI  1 
+DHII_HUMAN               (  164) SIVVVSSLAGKV  1 
+DHGB_BACME               (    8) KVVVITGSSTGL  1 
+HMTR_LEIMA               (  103) CDVLVNNASSFY  1 
+FVT1_HUMAN               (  167) RIVFVSSQAGQL  1 
+FVT1_HUMAN               (   74) KEIEMHSINDKQ  1 
+DHII_HUMAN               (  264) TTLLIRNPCRKI  1 
+HDHA_ECOLI               (  152) KNINMTSYASSK  1 
+DHB3_HUMAN               (  176) QKGLILNISSGI  1 
+HDE_CANTR                (  382) SEAIIKNVIDKY  1 
+HDHA_ECOLI               (  166) ASHLVRNMAFDL  1 
+ADH_DROME                (  186) RTTLVHKFNSWL  1 
+FABI_ECOLI               (  218) RTVTIEDVGNSA  1 
+ENTA_ECOLI               (  183) RTLWVSDDAEEQ  1 
+YRTP_BACSU               (   39) TSANVEKVAEEV  1 
+RIDH_KLEAE               (   40) KVVLIDREGEKL  1 
+DHGB_BACME               (   21) KSMAIRFATEKA  1 
+PCR_PEA                  (  384) KARKVWEVSEKL  1 
+BUDC_KLETE               (   91) PSTPIESITEEI  1 
+HMTR_LEIMA               (  267) KAKYITGTCVKV  1 
+HDE_CANTR                (   33) AKVVVNDLGGAL  1 
+RFBB_NEIGO               (  185) LPSIVSNCSNNY  1 
+RFBB_NEIGO               (   23) VRHIIQNTRDSV  1 
+FVT1_HUMAN               (  189) SKFAIRGLAEAL  1 
+CSGA_MYXXA               (   95) LNMAVRSMSTDL  1 
+DHB3_HUMAN               (  240) NTNVITKTADEF  1 
+HDE_CANTR                (  731) TNVVIVHGSKSV  1 
+BA72_EUBSP               (  135) KKGVIINTASVT  1 
+DHB3_HUMAN               (  219) KEVIIQVLTPYA  1 
+PCR_PEA                  (  220) RLIIVGSITGNT  1 
+HDHA_ECOLI               (  198) KSVITPEIEQKM  1 
+AP27_MOUSE               (  208) KFAEVEDVVNSI  1 
+HDE_CANTR                (  638) RDVILYNIALGA  1 
+MAS1_AGRRA               (  133) QTALIANIGFLC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 20 w= 12 n= 9632 bayes= 8.06636 E= 5.5e-001 
+  -107     76   -243   -173   -390   -393   -184   -393    276   -100   -313    -47    -78     81    207     19     29   -171   -365   -314 
+  -107   -349     -5     45    -71   -389   -181     84    139   -181   -310    112      9   -122      3     81    138    -36   -362   -310 
+    -7   -208   -480   -416    -57   -115    110    141   -124    -76     68    -93   -414   -339   -117   -137    -28    223   -310   -305 
+   -63   -230   -482    -32    -46   -484   -319    196   -109    113   -208    107    -85     58   -389   -335    -97     76    214    -17 
+  -565   -398   -753   -722   -484   -791   -717    309   -705   -165     74   -685   -711   -681   -747   -668   -126    231   -647   -595 
+  -173   -350    -78     79   -387   -181    128   -128     15   -181   -311    112    -77     81    114     54    200   -171    108    -25 
+  -320   -367    112     -1    -71    104     43   -415     54   -402   -335    237   -345   -143    -74    174   -258   -174   -384   -329 
+    47     91   -115   -118    -47   -102   -310    148   -106     10    131   -368    -84    -29   -375   -124     68     95   -307    -17 
+   149    168   -285    -85   -349     14   -220   -121   -199   -338   -281     13   -359   -169    -88    189     57   -154   -345    -34 
+  -299   -350     80    148     21     85   -181   -391     57   -181   -311     76    -77     13      3    142    -18   -171   -362   -310 
+   -27   -350     -4     79    -71     67   -181   -391    228   -181   -311     28   -327     81   -212     81   -240   -171    108    -25 
+   -27     93   -529   -451    -44   -493   -334    182   -114    141      0   -406   -439     57   -108   -347    -20     97   -302    127 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 20 w= 12 nsites= 43 E= 5.5e-001 
+ 0.046512  0.023256  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.395349  0.046512  0.000000  0.023256  0.023256  0.046512  0.232558  0.069767  0.069767  0.023256  0.000000  0.000000 
+ 0.046512  0.000000  0.046512  0.069767  0.023256  0.000000  0.000000  0.116279  0.139535  0.023256  0.000000  0.093023  0.046512  0.000000  0.046512  0.116279  0.162791  0.069767  0.000000  0.000000 
+ 0.116279  0.000000  0.000000  0.000000  0.023256  0.046512  0.046512  0.162791  0.023256  0.046512  0.046512  0.023256  0.000000  0.000000  0.023256  0.023256  0.046512  0.372093  0.000000  0.000000 
+ 0.069767  0.000000  0.000000  0.046512  0.023256  0.000000  0.000000  0.232558  0.023256  0.209302  0.000000  0.093023  0.023256  0.046512  0.000000  0.000000  0.023256  0.139535  0.046512  0.023256 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.488372  0.000000  0.023256  0.046512  0.000000  0.000000  0.000000  0.000000  0.000000  0.023256  0.418605  0.000000  0.000000 
+ 0.023256  0.000000  0.023256  0.093023  0.000000  0.023256  0.046512  0.023256  0.046512  0.023256  0.000000  0.093023  0.023256  0.046512  0.116279  0.093023  0.255814  0.023256  0.023256  0.023256 
+ 0.000000  0.000000  0.116279  0.046512  0.023256  0.209302  0.023256  0.000000  0.069767  0.000000  0.000000  0.232558  0.000000  0.000000  0.023256  0.232558  0.000000  0.023256  0.000000  0.000000 
+ 0.162791  0.023256  0.023256  0.023256  0.023256  0.046512  0.000000  0.162791  0.023256  0.093023  0.069767  0.000000  0.023256  0.023256  0.000000  0.023256  0.093023  0.162791  0.000000  0.023256 
+ 0.302326  0.046512  0.000000  0.023256  0.000000  0.116279  0.000000  0.023256  0.000000  0.000000  0.000000  0.046512  0.000000  0.000000  0.023256  0.279070  0.093023  0.023256  0.000000  0.023256 
+ 0.000000  0.000000  0.093023  0.162791  0.046512  0.186047  0.000000  0.000000  0.069767  0.023256  0.000000  0.069767  0.023256  0.023256  0.046512  0.186047  0.046512  0.023256  0.000000  0.000000 
+ 0.093023  0.000000  0.046512  0.093023  0.023256  0.162791  0.000000  0.000000  0.279070  0.023256  0.000000  0.046512  0.000000  0.046512  0.000000  0.116279  0.000000  0.023256  0.023256  0.023256 
+ 0.093023  0.023256  0.000000  0.000000  0.023256  0.000000  0.000000  0.209302  0.023256  0.255814  0.023256  0.000000  0.000000  0.046512  0.023256  0.000000  0.046512  0.162791  0.000000  0.069767 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KTVIITSVASKL MEME-2 regular expression
+--------------------------------------------------------------------------------
+[KR]XV[IL][IV]T[NSG]X[AS]XK[LI]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  0.17 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+2BHD_STREX                       4.91e-11  6_[2(2.14e-07)]_114_[2(7.27e-05)]_\
+    27_[1(1.37e-10)]_72
+3BHD_COMTE                       7.80e-08  6_[2(2.20e-05)]_113_[2(4.82e-05)]_\
+    29_[1(2.98e-09)]_69
+ADH_DROME                        3.13e-03  185_[2(2.63e-05)]_58
+AP27_MOUSE                       1.86e-08  32_[2(5.24e-05)]_124_[1(3.00e-10)]_\
+    64
+BA72_EUBSP                       9.63e-08  6_[2(2.40e-05)]_158_[1(3.52e-09)]_\
+    61
+BDH_HUMAN                        1.00e-05  227_[1(4.85e-08)]_104
+BPHB_PSEPS                       7.70e-07  5_[2(8.54e-05)]_154_[1(7.29e-09)]_\
+    92
+BUDC_KLETE                       5.79e-09  2_[2(3.14e-05)]_76_[2(9.24e-05)]_69_\
+    [1(1.52e-10)]_58
+DHES_HUMAN                       5.87e-04  2_[2(6.00e-07)]_313
+DHGB_BACME                       9.27e-11  7_[2(4.63e-06)]_1_[2(4.43e-05)]_147_\
+    [1(1.16e-11)]_71
+DHII_HUMAN                       2.04e-05  34_[2(1.23e-08)]_117_[2(3.03e-06)]_\
+    88_[2(8.52e-06)]_17
+DHMA_FLAS1                       1.28e-09  14_[2(4.63e-06)]_158_[1(1.68e-10)]_\
+    74
+ENTA_ECOLI                       2.16e-09  5_[2(1.87e-07)]_146_[1(8.54e-09)]_7_\
+    [2(3.42e-05)]_54
+FIXR_BRAJA                       1.11e-13  36_[2(9.99e-05)]_120_[2(5.14e-06)]_\
+    28_[1(8.81e-15)]_58
+GUTD_ECOLI                       3.28e-05  134_[2(6.79e-07)]_27_[1(5.67e-05)]_\
+    74
+HDE_CANTR                        2.61e-08  8_[2(4.67e-07)]_162_[1(2.50e-08)]_\
+    128_[2(4.07e-05)]_47_[2(2.40e-05)]_54_[2(1.14e-05)]_27_[1(3.24e-09)]_408
+HDHA_ECOLI                       1.53e-10  151_[2(9.40e-06)]_2_[2(2.63e-05)]_1_\
+    [1(1.02e-11)]_65
+LIGD_PSEPA                       5.93e-03  176_[1(2.23e-05)]_117
+NODG_RHIME                       1.03e-10  6_[2(3.03e-06)]_114_[2(4.12e-07)]_\
+    27_[1(1.68e-10)]_62
+RIDH_KLEAE                       3.00e-07  14_[2(7.71e-06)]_13_[2(4.43e-05)]_\
+    128_[1(3.62e-08)]_58
+YINL_LISMO                       4.04e-08  5_[2(4.42e-08)]_158_[1(7.65e-05)]_\
+    43_[1(7.72e-07)]_6
+YRTP_BACSU                       5.97e-07  6_[2(1.52e-05)]_20_[2(4.43e-05)]_\
+    124_[1(4.19e-08)]_52
+CSGA_MYXXA                       1.94e-02  166
+DHB2_HUMAN                       8.23e-06  140_[2(2.18e-06)]_60_[2(6.71e-05)]_\
+    27_[1(1.73e-06)]_124
+DHB3_HUMAN                       1.48e-03  175_[2(1.38e-05)]_123
+DHCA_HUMAN                       2.09e-05  216_[1(2.69e-08)]_48
+FABI_ECOLI                       1.17e-10  6_[2(3.79e-08)]_160_[1(1.80e-09)]_\
+    27_[2(2.87e-05)]_33
+FVT1_HUMAN                       6.27e-03  73_[2(8.52e-06)]_81_[2(6.98e-06)]_\
+    154
+HMTR_LEIMA                       5.35e-10  102_[2(5.14e-06)]_98_[1(5.34e-11)]_\
+    63
+MAS1_AGRRA                       5.55e-04  372_[2(6.00e-07)]_92
+PCR_PEA                          2.83e-03  86_[2(2.63e-05)]_196_[1(8.04e-05)]_\
+    77_[2(6.71e-05)]_4
+RFBB_NEIGO                       2.38e-03  6_[2(4.63e-06)]_328
+YURA_MYXXA                       4.33e-05  179_[1(1.36e-08)]_67
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (2) found.
+********************************************************************************
+
+CPU: Timothys-iMac.rd.unr.edu
+
+********************************************************************************
