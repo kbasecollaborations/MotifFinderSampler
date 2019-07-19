@@ -1,9 +1,9 @@
 ## define display information
 #
-name: Motif Finder MFMD
+name: Motif Finder Sampler
 
 tooltip: |
-    Use the MFMD motif finding tool to discover sequence motifs upsteam of a specified gene list.
+    Use the Sampler motif finding tool to discover sequence motifs upsteam of a specified gene list.
 screenshots: []
 
 icon: null
