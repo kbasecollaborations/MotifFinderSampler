@@ -79,13 +79,13 @@ class MotifFinderSampler:
         SamplerMotifCommand = SU.build_sampler_motif_command(promoterFastaFilePath,motLen,params['background'])
         SU.run_sampler_command(SamplerMotifCommand)
         sampler_out_path = '/kb/module/work/tmp/sampler_out'
-        #sampler_params = {'ws_name' : params['workspace_name'], 'path' : sampler_out_path + '/homerMotifs.all.motifs','obj_name' : params['obj_name']}
+        sampler_params = {'ws_name' : params['workspace_name'], 'path' : sampler_out_path,'obj_name' : params['obj_name']}
         MOU = MotifUtils(self.callback_url)
         dfu = DataFileUtil(self.callback_url)
         locDict = {}
         
-        #obj_ref = MOU.UploadFromSampler(sampler_params)['obj_ref']
-        obj_ref='23/34/123'     
+        obj_ref = SU.UploadFromSampler(self.callback_url, sampler_params)['obj_ref']
+        #obj_ref='23/34/123'     
         #SU.write_obj_ref(sampler_out_path, obj_ref)
         
         timestamp = int((datetime.utcnow() - datetime.utcfromtimestamp(0)).total_seconds()*1000)
@@ -318,6 +318,7 @@ class MotifFinderSampler:
                              'output is not type dict as required.')
         # return the results
         return [output]
+
     def status(self, ctx):
         #BEGIN_STATUS
         returnVal = {'state': "OK",

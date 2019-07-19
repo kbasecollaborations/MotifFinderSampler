@@ -36,17 +36,16 @@ class SamplerUtil:
       file.close() 
 
   def parse_sampler_output(self, path):
-      pfmList = []
-      pfmDict={}
       outputFileList = []
-      pfmMatrix=False
+ 
       seqflag=False
       motifList={}
       motifDict={}
       locList=[]
       alphabet=['A','C','G','T']
+      print(path)
   
-      '''motifSet=[]
+      motifSet=[]
       motifList['Condition']='temp'
       motifList['SequenceSet_ref']='123'
 
@@ -56,109 +55,75 @@ class SamplerUtil:
       background['G']=0.0
       background['T']=0.0
 
-      motifDict['Motif_Locations'] = []
+      
       motifDict['PWM'] = []
       motifDict['PFM'] = []
-      motiflen=0
-      a=[]
-      c=[]
-      g=[]
-      t=[]
+
+      
       pwmList=[]
       pwmDict={}
+      pfmDict={}
       rowList = []
       rowDict={}
-
       for filename in os.listdir(path):
           outputFileList.append(path + '/' + filename)
-          if(filename=="mfmd_out.txt"):
+          if(filename=="SeqSet.out"):
              outputFilePath=path+'/'+filename
-             mfmdFile = open(outputFilePath,'r')
-             for line in mfmdFile:
-                 if(re.search("PPM Matrix",line)):
-                    pfmMatrix=True
-                 if(pfmMatrix):
-                    if(line[0].isdigit()):
-                       line=line.strip()
-                       out=line.split()
-                       pfmList.append(out)
-                       a.append(out[0])
-                       c.append(out[1])
-                       g.append(out[2])
-                       t.append(out[3])
+             print(outputFilePath)
+             samplerFile = open(outputFilePath,'r')
+             for line in samplerFile:
+                 line=line.rstrip()
+                 if(line.startswith("#id:")):
+                   #print(locList)
+                   motifSet.append(motifDict)
+                   motifDict['Motif_Locations'] = []
+                   locList=[]
+                   seqflag=True
+                   seq=line.split("\t")
+                   consensus=(seq[1]).split(" ")[1]
+                   pwmDict['A']=[]
+                   pwmDict['C']=[]
+                   pwmDict['G']=[]
+                   pwmDict['T']=[]
 
-                       rowList = []
-                       rowList.append(('A',float(out[0])))
-                       rowList.append(('C',float(out[1])))
-                       rowList.append(('G',float(out[2])))
-                       rowList.append(('T',float(out[3])))
-                       rowDict['A']=float(out[0])
-                       rowDict['C']=float(out[1])
-                       rowDict['G']=float(out[2])
-                       rowDict['T']=float(out[3])
-
-                 if(re.search("PSSM Matrix",line)):
-                    pfmMatrix=False
-                 if(re.search("Sequences",line)):
-                    seqflag=True
-                 if(seqflag==True):
-                    line=line.strip()
-                    if(re.search('\*',line)):
-                       seqflag=False
-                    if((line) and not (line.startswith("Seq")) and not (line.startswith("*"))):
-                       line=line.rstrip()
-                       seq=line.split()
-                       seqid=seq[0]
-                       seq_start=int(seq[1])
-                       seq_end=int(seq_start)+int(motiflen)
-                       sequence=seq[2]
-                       orientation='+'
-
-                       locDict={}
-                       locDict['sequence_id']=seqid;
-                       locDict['start']=seq_start;
-                       locDict['end']=seq_end;
-                       locDict['sequence']=sequence;
-                       locDict['orientation']=orientation;
-                       motifDict['Motif_Locations'].append(locDict)
-
-                  
-                 if(re.search("Width",line)):
-                    arr=line.split(" ")
-                    motiflen=arr[1].split("\t")[0]
-
-      a=[float(x) for x in a]
-      c=[float(x) for x in c]
-      g=[float(x) for x in g]
-      t=[float(x) for x in t]
-      pwmDict['A']=a
-      pwmDict['C']=c
-      pwmDict['G']=g
-      pwmDict['T']=t
-
-      pfmDict['A']=[]
-      pfmDict['C']=[]
-      pfmDict['G']=[]
-      pfmDict['T']=[]
-
-      motifStr = '>test\n'
-      motifStr += 'A ' + str(a).replace(',','') + '\n'
-      motifStr += 'C ' + str(c).replace(',','') + '\n'
-      motifStr += 'G ' + str(g).replace(',','') + '\n'
-      motifStr += 'T ' + str(t).replace(',','') + '\n'
-
-      handle = StringIO(motifStr)
-
-      BioMotif = motifs.read(handle, 'jaspar')
-      motifDict['PWM']=pwmDict
-      motifDict['PFM']=pfmDict
-      motifDict['Iupac_sequence']=str(BioMotif.degenerate_consensus)
-      motifSet.append(motifDict)                                            #keep in loop for multiple motifs
+                   pfmDict['A']=[]
+                   pfmDict['C']=[]
+                   pfmDict['G']=[]
+                   pfmDict['T']=[]
+                   motifDict['PWM']=pwmDict
+                   motifDict['PFM']=pfmDict
+                   motifDict['Iupac_sequence']=consensus
+                   #print(consensus)
+                 if(seqflag):
+                     if(line.endswith(";")):
+                        out=line.split(" ")
+                        rec=(out[0]).split("\t")
+                        seqid=rec[0]
+                        orientation=rec[6]
+                        if(orientation == "+"):
+                           seq_start=rec[3]
+                           seq_end=rec[4]
+                        else:
+                           seq_start=rec[4]
+                           seq_end=rec[3]
+                        sequence=(out[3]).replace(";", "").replace("\"", "")
+                        locDict={}
+                        locDict['sequence_id']=seqid;
+                        locDict['start']=seq_start;
+                        locDict['end']=seq_end;
+                        locDict['sequence']=sequence;
+                        locDict['orientation']=orientation;
+                        motifDict['Motif_Locations'].append(locDict)
+                        #print(seqid+"\t"+sequence+"\t"+strand+"\t"+start+"\t"+stop)
+                   
+                        locList.append(line)
+             else:
+                 motifSet.append(motifDict)
 
       motifList['Motifs']=motifSet
       motifList['Background']=background
-      motifList['Alphabet']=alphabet'''
-
+      motifList['Alphabet']=alphabet  
+      #print(motifList)     
       return motifList
 
   def UploadFromSampler(self, callback_url, params):
@@ -171,10 +136,9 @@ class SamplerUtil:
           """
           # ctx is the context object
           # return variables are: output
-          #BEGIN UploadFrommfmd
+          #BEGIN UploadFromSampler
           print('Extracting motifs')
-          #motifList = MFU.parse_mfmd_output(params['path'])
-          '''motifList = self.parse_mfmd_output(params['path'])
+          motifList = self.parse_sampler_output(params['path'])
           print(motifList)
        
           MSO = {}
@@ -191,11 +155,11 @@ class SamplerUtil:
           motif_set_ref = "%s/%s/%s" % (info[6], info[0], info[4])
           print(motif_set_ref)
           output = {'obj_ref' : motif_set_ref}
-          print(output)'''
+          print(output)
 
         
           #exit("test")
-          #END UploadFrommfmd
+          #END UploadFromSampler
 
           # At some point might do deeper type checking...
           if not isinstance(output, dict):
@@ -203,4 +167,7 @@ class SamplerUtil:
                              'output is not type dict as required.')
           # return the results
           return [output]
+
+#Su=SamplerUtil()
+#print(Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out"))
 
