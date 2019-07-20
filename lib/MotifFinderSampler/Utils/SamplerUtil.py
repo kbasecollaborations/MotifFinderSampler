@@ -21,7 +21,6 @@ class SamplerUtil:
       subprocess.call('mkdir /kb/module/work/tmp/sampler_out', shell=True)
       subprocess.call(cmd1, shell=True)
       subprocess.call(cmd2, shell=True)
-      #cwd=config['scratch']
       os.chdir("/kb/module/work/tmp/sampler_out")
       os.system("/kb/module/work/tmp/sampler_out/CreateBackgroundModel -f /kb/module/work/tmp/SeqSet.fa -b /kb/module/work/tmp/sampler_out/SeqSet.bg")
       command = '/kb/module/work/tmp/sampler_out/MotifSampler -f /kb/module/work/tmp/SeqSet.fa -b /kb/module/work/tmp/sampler_out/SeqSet.bg -o /kb/module/work/tmp/sampler_out/SeqSet.out -m /kb/module/work/tmp/sampler_out/SeqSet.matrix -w 8'

@@ -48,6 +48,7 @@ class MotifFinderSampler:
     # be found
     def __init__(self, config):
         #BEGIN_CONSTRUCTOR
+        self.config = config
         self.callback_url = os.environ['SDK_CALLBACK_URL']
         self.shared_folder = config['scratch']
         logging.basicConfig(format='%(created)s %(levelname)s: %(message)s',
@@ -84,9 +85,9 @@ class MotifFinderSampler:
         dfu = DataFileUtil(self.callback_url)
         locDict = {}
         
-        obj_ref = SU.UploadFromSampler(self.callback_url, sampler_params)['obj_ref']
-        #obj_ref='23/34/123'     
-        #SU.write_obj_ref(sampler_out_path, obj_ref)
+        #obj_ref = SU.UploadFromSampler(self.callback_url, sampler_params)[0]['obj_ref'] 
+        obj_ref = SU.UploadFromSampler(self.callback_url, sampler_params)[0]['obj_ref']    
+        SU.write_obj_ref(sampler_out_path, obj_ref)
         
         timestamp = int((datetime.utcnow() - datetime.utcfromtimestamp(0)).total_seconds()*1000)
         timestamp = str(timestamp)
