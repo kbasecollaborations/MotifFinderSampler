@@ -73,8 +73,10 @@ class SamplerUtil:
              for line in samplerFile:
                  line=line.rstrip()
                  if(line.startswith("#id:")):
-                   #print(locList)
-                   motifSet.append(motifDict)
+                   #print(motifDict)
+                   if(len(motifDict) !=0 ):
+                      motifSet.append(motifDict)
+
                    motifDict['Motif_Locations'] = []
                    locList=[]
                    seqflag=True
@@ -108,8 +110,8 @@ class SamplerUtil:
                         sequence=(out[3]).replace(";", "").replace("\"", "")
                         locDict={}
                         locDict['sequence_id']=seqid;
-                        locDict['start']=seq_start;
-                        locDict['end']=seq_end;
+                        locDict['start']=int(seq_start);
+                        locDict['end']=int(seq_end);
                         locDict['sequence']=sequence;
                         locDict['orientation']=orientation;
                         motifDict['Motif_Locations'].append(locDict)
@@ -117,6 +119,7 @@ class SamplerUtil:
                    
                         locList.append(line)
              else:
+                 #print(motifDict)
                  motifSet.append(motifDict)
 
       motifList['Motifs']=motifSet
@@ -168,5 +171,6 @@ class SamplerUtil:
           return [output]
 
 #Su=SamplerUtil()
-#print(Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out"))
+#out=Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
+#print(out)
 

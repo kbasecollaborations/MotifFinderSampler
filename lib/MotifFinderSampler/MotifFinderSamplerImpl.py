@@ -106,10 +106,10 @@ class MotifFinderSampler:
         JsonPath = '/kb/module/work/tmp'
 
         dfu = DataFileUtil(self.callback_url)
-        #get_obj_params = {'object_refs' : [obj_ref]}
-        #samplerMotifSet = dfu.get_objects(get_obj_params)['data'][0]['data']
-        #mr=MakeNewReport()
-        #mr.MakeReport(htmlDir,samplerMotifSet)
+        get_obj_params = {'object_refs' : [obj_ref]}
+        samplerMotifSet = dfu.get_objects(get_obj_params)['data'][0]['data']
+        mr=MakeNewReport()
+        mr.MakeReport(htmlDir,samplerMotifSet)
 
 
         try:
