@@ -34,6 +34,55 @@ class SamplerUtil:
       file.write(obj_ref)
       file.close() 
 
+  def get_pwm(self, lst):
+      
+      a=[]
+      c=[] 
+      g=[]
+      t=[]
+      pwmDict={}
+      for line in lst:   
+          out=line.split("\t")                  
+          a.append(float(out[0]))
+          c.append(float(out[1]))
+          g.append(float(out[2]))
+          t.append(float(out[3]))
+                        
+      pwmDict['A']=a
+      pwmDict['C']=c
+      pwmDict['G']=g
+      pwmDict['T']=t
+      
+      return pwmDict
+
+  def parse_matrix_output(self, path):
+      data={}
+      queryFile = open(path+'/'+"SeqSet.matrix",'r')
+      qHeader=''
+      qSequence=''
+      while not self.is_eof(queryFile):
+            qline = queryFile.readline()
+             
+            if (qline.startswith("#ID")):
+                
+                qHeader=qline.split(" ")[2]
+                 
+            else: 
+                qSequence=qline  
+                if((qline[0]).isdigit()):
+                    qHeader=qHeader.strip()
+                    qSequence=qSequence.strip() 
+                    if(qHeader in data):
+                       val=[]
+                       val=data[qHeader]
+                       val.append(qSequence)
+                    else: 
+                       val=[]
+                       val.append(qSequence)
+                       data[qHeader]=val
+
+      return data
+
   def parse_sampler_output(self, path):
       outputFileList = []
  
