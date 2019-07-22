@@ -121,7 +121,7 @@ class SamplerUtil:
       rowList = []
       rowDict={}
       
-      matrix=Su.parse_matrix_output(path)
+      matrix=self.parse_matrix_output(path)
 
       for filename in os.listdir(path):
           outputFileList.append(path + '/' + filename)
