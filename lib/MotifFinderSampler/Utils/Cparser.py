@@ -94,17 +94,15 @@ class SamplerUtil:
       background['T']=0.0
 
       
-      motifDict['PWM'] = []
-      motifDict['PFM'] = []
-
+      
       
       pwmList=[]
-      pwmDict={}
+      
       pfmDict={}
       rowList = []
       rowDict={}
       
-      matrix=Su.parse_matrix_output(path)
+      matrix=self.parse_matrix_output(path)
 
       for filename in os.listdir(path):
           outputFileList.append(path + '/' + filename)
@@ -118,6 +116,9 @@ class SamplerUtil:
                    #print(motifDict)
                    if(len(motifDict) !=0 ):
                       motifSet.append(motifDict)
+                      pwmDict={}
+                      motifDict={}
+                      
 
                    motifDict['Motif_Locations'] = []
                    locList=[]
@@ -126,18 +127,14 @@ class SamplerUtil:
                    consensus=(seq[1]).split(" ")[1]
                    seqid=(seq[0]).split(" ")[1]
                   
-                   #exit(self.get_pwm(matrix[seqid]))
+                   pwmDict={}
                    pwmDict['A']=[]
                    pwmDict['C']=[]
                    pwmDict['G']=[]
                    pwmDict['T']=[]
-
-                   '''pfmDict['A']=[]
-                   pfmDict['C']=[]
-                   pfmDict['G']=[]
-                   pfmDict['T']=[]
-                   motifDict['PWM']=pwmDict'''
                    motifDict['PWM']=self.get_pwm(matrix[seqid])
+                   print(seqid)
+                   print(self.get_pwm(matrix[seqid]))
                    motifDict['PFM']=pfmDict
                    motifDict['Iupac_sequence']=consensus
                    
