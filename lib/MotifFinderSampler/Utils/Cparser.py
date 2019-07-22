@@ -72,9 +72,112 @@ class SamplerUtil:
                        data[qHeader]=val
 
       return data
+
+  def parse_sampler_output(self, path):
+      outputFileList = []
+ 
+      seqflag=False
+      motifList={}
+      motifDict={}
+      locList=[]
+      alphabet=['A','C','G','T']
+      print(path)
+  
+      motifSet=[]
+      motifList['Condition']='temp'
+      motifList['SequenceSet_ref']='123'
+
+      background={}
+      background['A']=0.0
+      background['C']=0.0
+      background['G']=0.0
+      background['T']=0.0
+
+      
+      motifDict['PWM'] = []
+      motifDict['PFM'] = []
+
+      
+      pwmList=[]
+      pwmDict={}
+      pfmDict={}
+      rowList = []
+      rowDict={}
+      
+      matrix=Su.parse_matrix_output(path)
+
+      for filename in os.listdir(path):
+          outputFileList.append(path + '/' + filename)
+          if(filename=="SeqSet.out"):
+             outputFilePath=path+'/'+filename
+             print(outputFilePath)
+             samplerFile = open(outputFilePath,'r')
+             for line in samplerFile:
+                 line=line.rstrip()
+                 if(line.startswith("#id:")):
+                   #print(motifDict)
+                   if(len(motifDict) !=0 ):
+                      motifSet.append(motifDict)
+
+                   motifDict['Motif_Locations'] = []
+                   locList=[]
+                   seqflag=True
+                   seq=line.split("\t")
+                   consensus=(seq[1]).split(" ")[1]
+                   seqid=(seq[0]).split(" ")[1]
+                  
+                   #exit(self.get_pwm(matrix[seqid]))
+                   pwmDict['A']=[]
+                   pwmDict['C']=[]
+                   pwmDict['G']=[]
+                   pwmDict['T']=[]
+
+                   '''pfmDict['A']=[]
+                   pfmDict['C']=[]
+                   pfmDict['G']=[]
+                   pfmDict['T']=[]
+                   motifDict['PWM']=pwmDict'''
+                   motifDict['PWM']=self.get_pwm(matrix[seqid])
+                   motifDict['PFM']=pfmDict
+                   motifDict['Iupac_sequence']=consensus
+                   
+                 if(seqflag):
+                     if(line.endswith(";")):
+                        out=line.split(" ")
+                        rec=(out[0]).split("\t")
+                        seqid=rec[0]
+                        orientation=rec[6]
+                        if(orientation == "+"):
+                           seq_start=rec[3]
+                           seq_end=rec[4]
+                        else:
+                           seq_start=rec[4]
+                           seq_end=rec[3]
+                        sequence=(out[3]).replace(";", "").replace("\"", "")
+                        locDict={}
+                        locDict['sequence_id']=seqid;
+                        locDict['start']=int(seq_start);
+                        locDict['end']=int(seq_end);
+                        locDict['sequence']=sequence;
+                        locDict['orientation']=orientation;
+                        motifDict['Motif_Locations'].append(locDict)
+                        #print(seqid+"\t"+sequence+"\t"+strand+"\t"+start+"\t"+stop)
+                   
+                        locList.append(line)
+             else:
+                 #print(motifDict)
+                 motifSet.append(motifDict)
+
+      motifList['Motifs']=motifSet
+      motifList['Background']=background
+      motifList['Alphabet']=alphabet  
+      #print(motifList)     
+      return motifList
+
                 
 Su=SamplerUtil()
-out=Su.parse_matrix_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
-dict=Su.get_pwm(out['box_1_1_CCTTCnTC'])
-print(dict)
+#out=Su.parse_matrix_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
+#dict=Su.get_pwm(out['box_1_1_CCTTCnTC'])
+out=Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
+print(out)
 

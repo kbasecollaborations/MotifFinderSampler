@@ -34,6 +34,13 @@ class SamplerUtil:
       file.write(obj_ref)
       file.close() 
 
+  def is_eof(self, f):
+    cur = f.tell()    # save current position
+    f.seek(0, os.SEEK_END)
+    end = f.tell()    # find the size of file
+    f.seek(cur, os.SEEK_SET)
+    return cur == end
+
   def get_pwm(self, lst):
       
       a=[]
@@ -113,6 +120,9 @@ class SamplerUtil:
       pfmDict={}
       rowList = []
       rowDict={}
+      
+      matrix=Su.parse_matrix_output(path)
+
       for filename in os.listdir(path):
           outputFileList.append(path + '/' + filename)
           if(filename=="SeqSet.out"):
@@ -131,19 +141,23 @@ class SamplerUtil:
                    seqflag=True
                    seq=line.split("\t")
                    consensus=(seq[1]).split(" ")[1]
+                   seqid=(seq[0]).split(" ")[1]
+                  
+                   #exit(self.get_pwm(matrix[seqid]))
                    pwmDict['A']=[]
                    pwmDict['C']=[]
                    pwmDict['G']=[]
                    pwmDict['T']=[]
 
-                   pfmDict['A']=[]
+                   '''pfmDict['A']=[]
                    pfmDict['C']=[]
                    pfmDict['G']=[]
                    pfmDict['T']=[]
-                   motifDict['PWM']=pwmDict
+                   motifDict['PWM']=pwmDict'''
+                   motifDict['PWM']=self.get_pwm(matrix[seqid])
                    motifDict['PFM']=pfmDict
                    motifDict['Iupac_sequence']=consensus
-                   #print(consensus)
+                   
                  if(seqflag):
                      if(line.endswith(";")):
                         out=line.split(" ")
@@ -176,6 +190,7 @@ class SamplerUtil:
       motifList['Alphabet']=alphabet  
       #print(motifList)     
       return motifList
+
 
   def UploadFromSampler(self, callback_url, params):
           """
