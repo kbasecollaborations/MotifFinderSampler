@@ -13,7 +13,7 @@ from installed_clients.AssemblyUtilClient import AssemblyUtil
 from installed_clients.DataFileUtilClient import DataFileUtil
 from installed_clients.SequenceSetUtilsClient import SequenceSetUtils
 from installed_clients.MotifUtilsClient import MotifUtils
-
+from biokbase.workspace.client import Workspace
 from MotifFinderSampler.Utils.MakeNewReport import MakeNewReport
 from MotifFinderSampler.Utils.FastaUtils import FastaUtils
 from MotifFinderSampler.Utils.BackgroundUtils import BackgroundUtils
