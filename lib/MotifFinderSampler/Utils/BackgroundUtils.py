@@ -5,6 +5,11 @@ class BackgroundUtils:
       pass
 
   def BuildBackground(self, fastapath):
+      '''
+
+      :param fastapath:
+      :return:
+      '''
       samplerpath = '/kb/module/work/tmp/sampler_background.fa'
       backgroundCommand = 'mv ' + fastapath + ' ' + samplerpath
 

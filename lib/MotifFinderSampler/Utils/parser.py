@@ -16,6 +16,11 @@ class SamplerUtil:
       pass
 
   def parse_sampler_output(self, path):
+      '''
+
+      :param path:
+      :return:
+      '''
       outputFileList = []
  
       seqflag=False
@@ -78,9 +83,4 @@ class SamplerUtil:
                 pwmDict={}    
       return pwmDict
 
-
-
-Su=SamplerUtil()
-out=Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
-#print(out)
 

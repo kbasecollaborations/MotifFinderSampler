@@ -16,6 +16,13 @@ class SamplerUtil:
       pass
 
   def build_sampler_motif_command(self, inputFilePath, motiflen, prb):
+      '''
+
+      :param inputFilePath:
+      :param motiflen:
+      :param prb:
+      :return:
+      '''
       cmd1 = 'cp -r /kb/module/deps/kb_sampler/CreateBackgroundModel /kb/module/work/tmp/sampler_out'
       cmd2 = 'cp -r /kb/module/deps/kb_sampler/MotifSampler /kb/module/work/tmp/sampler_out'
       subprocess.call('mkdir /kb/module/work/tmp/sampler_out', shell=True)
@@ -27,14 +34,30 @@ class SamplerUtil:
       return command
 
   def run_sampler_command(self, command):
+      '''
+
+      :param command:
+      :return:
+      '''
       os.system(command)
 
   def write_obj_ref(self, path, obj_ref):
+      '''
+
+      :param path:
+      :param obj_ref:
+      :return:
+      '''
       file = open(path+"/sampler_obj.txt","w")
       file.write(obj_ref)
       file.close() 
 
   def is_eof(self, f):
+    '''
+
+    :param f:
+    :return:
+    '''
     cur = f.tell()    # save current position
     f.seek(0, os.SEEK_END)
     end = f.tell()    # find the size of file
@@ -42,6 +65,11 @@ class SamplerUtil:
     return cur == end
 
   def get_pwm(self, lst):
+      '''
+
+      :param lst:
+      :return:
+      '''
       
       a=[]
       c=[] 
@@ -63,6 +91,11 @@ class SamplerUtil:
       return pwmDict
 
   def parse_matrix_output(self, path):
+      '''
+
+      :param path:
+      :return:
+      '''
       data={}
       queryFile = open(path+'/'+"SeqSet.matrix",'r')
       qHeader=''
@@ -91,6 +124,11 @@ class SamplerUtil:
       return data
 
   def parse_sampler_output(self, path):
+      '''
+
+      :param path:
+      :return:
+      '''
       outputFileList = []
  
       seqflag=False
@@ -110,9 +148,9 @@ class SamplerUtil:
       background['G']=0.0
       background['T']=0.0
 
-      
-      
-      
+
+
+
       pwmList=[]
       
       pfmDict={}
@@ -231,7 +269,4 @@ class SamplerUtil:
           # return the results
           return [output]
 
-#Su=SamplerUtil()
-#out=Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
-#print(out)
 

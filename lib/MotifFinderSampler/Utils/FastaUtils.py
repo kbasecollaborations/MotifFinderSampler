@@ -3,6 +3,12 @@ class FastaUtils:
   def __init__(self):
       pass 
   def RemoveRepeats(self,path,newpath):
+      '''
+
+      :param path:
+      :param newpath:
+      :return:
+      '''
       tmp = '/kb/module/work/tmp/tmp.fa'
       command = '/kb/deployment/bin/meme/bin/dust ' + path + ' > ' + tmp
       os.system(command)

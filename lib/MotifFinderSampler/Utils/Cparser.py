@@ -15,9 +15,12 @@ class SamplerUtil:
   def __init__(self):
       pass
 
-  
-
   def is_eof(self, f):
+    '''
+
+    :param f:
+    :return:
+    '''
     cur = f.tell()    # save current position
     f.seek(0, os.SEEK_END)
     end = f.tell()    # find the size of file
@@ -25,6 +28,11 @@ class SamplerUtil:
     return cur == end
 
   def get_pwm(self, lst):
+      '''
+
+      :param lst:
+      :return:
+      '''
       
       a=[]
       c=[] 
@@ -46,6 +54,11 @@ class SamplerUtil:
       return pwmDict
 
   def parse_matrix_output(self, path):
+      '''
+
+      :param path:
+      :return:
+      '''
       data={}
       queryFile = open(path+'/'+"SeqSet.matrix",'r')
       qHeader=''
@@ -74,6 +87,11 @@ class SamplerUtil:
       return data
 
   def parse_sampler_output(self, path):
+      '''
+
+      :param path:
+      :return:
+      '''
       outputFileList = []
  
       seqflag=False
@@ -93,9 +111,6 @@ class SamplerUtil:
       background['G']=0.0
       background['T']=0.0
 
-      
-      
-      
       pwmList=[]
       
       pfmDict={}
@@ -168,13 +183,6 @@ class SamplerUtil:
       motifList['Motifs']=motifSet
       motifList['Background']=background
       motifList['Alphabet']=alphabet  
-      #print(motifList)     
       return motifList
 
                 
-Su=SamplerUtil()
-#out=Su.parse_matrix_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
-#dict=Su.get_pwm(out['box_1_1_CCTTCnTC'])
-out=Su.parse_sampler_output("/home/manish/Desktop/reorganization/MotifFinderSampler/test_local/workdir/tmp/sampler_out")
-print(out)
-
